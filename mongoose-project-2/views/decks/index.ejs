@@ -1,4 +1,9 @@
 <%- include('../partials/header') %>
 
 <h1>my decks</h1>
-<div><button a href="/decks/new">+</button></div>
+<% decks.forEach(function(d) { %>
+    <% if (user && user._id.equals(d.user)) { %>
+        <button a href = "/decks/<%= d._id %>"><%= d.deckName %></button>
+    <% } %>
+<% }); %>
+<div><button a href="/decks">+</button></div>
