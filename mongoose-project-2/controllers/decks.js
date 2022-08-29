@@ -12,5 +12,5 @@ function newDeck (req, res) {
 
   module.exports = {
     index,
-    newDeck,
+    new: newDeck,
   };
