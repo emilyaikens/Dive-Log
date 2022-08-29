@@ -1,11 +1,21 @@
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
-var cookieParser = require('cookie-parser');
+var cookieParser = require('cookie-parser'); 
+var session = require('express-session'); //remember to $ npm install express-session
+var passport = require('passport'); //remember to $ npm i passport
+var methodOverride = require('method-override'); //remember to $npm i method-override
 var logger = require('morgan');
+require('dotenv').config(); // for .env file
+require('./config/database');
+require('./config/passport');
+
+//remember, for the google oauth to work, $ npm i passport-google-oauth
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+var moviesRouter = require('./routes/movies');
+var reviewsRouter = require('./routes/reviews');
+var performersRouter = require('./routes/performers');
 
 var app = express();
 
@@ -17,10 +27,27 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(methodOverride('_method'));
+
+app.use(session({
+  secret: process.env.SECRET,
+  resave: false,
+  saveUninitialized: true
+}));
+app.use(passport.initialize());
+app.use(passport.session());
+
+app.use(function(req,res,next) {
+  res.locals.user = req.user; // can be accessed anywhere with req.user
+  next(); //go to the next function
+})
+
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/movies', moviesRouter);
+app.use('/', reviewsRouter);
+app.use('/', performersRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
