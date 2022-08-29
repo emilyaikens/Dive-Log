@@ -1,4 +1,4 @@
-# Project 2: Zooalog
+# Project 2: Get Flashed
 
 ## Description:
 text
@@ -40,11 +40,13 @@ text
 
 ## Other sources: 
 
-* [Framework/planning: Google Doc](https://docs.google.com/document/d/1nT69I44XXzSD8M6JIAcWodkT1JvCkiWDgvXXCvcQc5U/edit?usp=sharing)
+* [Planning/Pseudocode: Google Doc](https://docs.google.com/document/d/1AZvyxvdnltxkjQmsthisayq21--fnwLX5ruJO0g98dk/edit?usp=sharing)
 
-* [Progress Tracking/AAUs: Trello Board](https://trello.com/invite/b/MhlMC0Qn/c32c891202deb797028f567e7c5d68d3/zooalog)
+* [Data Flow: Google Sheet](https://docs.google.com/spreadsheets/d/1FWgW4MXwyAINuuvfisloNnvXlRBv9NIRCU9RaLkd3xs/edit?usp=sharing)
 
-* [Wireframe Pages: Whimsical](https://whimsical.com/zooalog-D5avFK95o1bgy94H4kbUSd)
+* [Progress Tracking/AAUs: Trello Board](https://trello.com/b/9zCsQ2QU/project-2-flash-cards)
 
-* [ERD: Lucidchart](https://lucid.app/lucidchart/430bb0f4-b32e-43b5-8074-20212c4741b5/edit?viewport_loc=222%2C38%2C1660%2C1776%2C0_0&invitationId=inv_46b7e97e-eb4b-45bf-b137-1a0c8929c690#)
+* [Wireframe Pages: Whimsical](https://whimsical.com/project-2-flash-cards-V4m9vgEdUeR6wBrFP1uoEr)
+
+* [ERD: Lucidchart](https://lucid.app/lucidchart/c21ddceb-c136-4b10-885b-a41790babade/edit?page=0_0&invitationId=inv_95a520de-bfd8-4610-a430-0cdf9dd83f26#)
 
