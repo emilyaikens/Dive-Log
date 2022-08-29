@@ -6,4 +6,8 @@
         <button a href = "/decks/<%= d._id %>"><%= d.deckName %></button>
     <% } %>
 <% }); %>
-<div><button a href="/decks">+</button></div>
+<div>
+    <form action="/decks/new">
+        <input type="submit" value="+">
+    </form>
+</div>
