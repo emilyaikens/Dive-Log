@@ -6,6 +6,11 @@ function index(req, res) {
     });
   }
 
+function newDeck (req, res) {
+    res.render('decks/new', {title: "New Deck"});
+}
+
   module.exports = {
     index,
+    newDeck,
   };
