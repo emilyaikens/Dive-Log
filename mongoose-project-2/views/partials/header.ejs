@@ -9,11 +9,9 @@
 </head>
 <body>
 <nav>
-    <!-- <a href="" <%- title === '' ? 'class="active"' : '' %>>###</a> -->
     <% if (user) { %>
-        <!-- <a href="" <%- title === '' ? 'class="active"' : '' %>>
-            ###</a>
-        <a href="" <%- title === '' ? 'class="active"' : '' %>>###</a> -->
+        <a href="/decks" <%- title === '' ? 'class="active"' : '' %>>MY DECKS</a>
+        <a href="/decks/new" <%- title === '' ? 'class="active"' : '' %>>NEW DECK</a>
         <a href="/logout">LOG OUT</a>
     <% } else { %>
         <a href="/auth/google" class="login">LOG IN&nbsp;</a>
