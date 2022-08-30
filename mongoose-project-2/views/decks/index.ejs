@@ -4,7 +4,7 @@
 
 <% decks.forEach(function(m) { %>
     <% if (user && user._id.equals(m.user)) { %>
-        <button><a href="/decks/<%= m._id %>"><%= m.deckName %></a></button>
+        <a href="/decks/<%= m._id %>"><button><%= m.deckName %></button></a>
       <% } %>
 <% }); %>
 
