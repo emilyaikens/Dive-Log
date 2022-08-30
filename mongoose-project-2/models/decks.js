@@ -24,6 +24,7 @@ const deckSchema = new Schema ({
         required: true
     },
     user: {type: Schema.Types.ObjectId, ref: 'User'},
+    displayCard: {type: String},
     cards: [cardSchema]
 }, {
     timestamps: true
