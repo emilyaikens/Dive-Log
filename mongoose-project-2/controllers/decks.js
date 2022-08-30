@@ -29,6 +29,30 @@ function show (req,res) {
     });
 };
 
+function deleteDeck(req,res) {
+    console.log("deletedeck is called");
+    // Deck.findById(req.params.id, function (error, deck) {
+    //     deck.remove();
+    //     deck.save().then(function() {
+    //         res.redirect(`/decks/${deck._id}/edit`);
+    //     }).catch(function(error) {
+    //         return next(error);
+    //     });
+    // });
+};
+
+// function deleteCard(req,res) {
+//     Deck.findOne({'cards._id': req.params.id}).then(function (deck) {
+//         const card = deck.cards.id(req.params.id);
+//         card.remove();
+//         deck.save().then(function() {
+//             res.redirect(`/decks/${deck._id}/edit`);
+//         }).catch(function(error) {
+//             return next(error);
+//         });
+//     });   
+//  };
+
 //find deck id and render the show page with all of the cards
 function flash (req, res) {
     Deck.findById(req.params.id, function (err, deck) {
@@ -42,4 +66,5 @@ function flash (req, res) {
     create,
     show,
     flash,
+    delete: deleteDeck
   };

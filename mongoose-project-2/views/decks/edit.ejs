@@ -35,3 +35,8 @@
 <% } else { %>
     <div>There are no cards in this deck yet</div>
 <% }; %>
+
+<form action="/decks/<%= deck._id %>?_method=DELETE"
+    class="delete-deck" method="POST">
+    <button type="submit">delete deck</button>
+</form>
