@@ -25,8 +25,13 @@ function create(req, res) {
  };
 
  function show (req,res) {
-    console.log("")
- };
+    Deck.findOne({'cards._id': req.params.id}).then(function (deck) {
+        const card = deck.cards.id(req.params.id);
+        res.render('cards/edit', {title: "Edit Card", card, deck})
+        }).catch(function(error) {
+            return next(error);
+        });  
+};
 
 module.exports = {
     create,

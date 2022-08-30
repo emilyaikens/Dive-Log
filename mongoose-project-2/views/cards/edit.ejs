@@ -2,11 +2,13 @@
 
 <h2>Edit Card</h2>
 
-<!-- form to edit card -->
-<form class = "edit-card-form" action="?_method=PUT" method ="POST" autocomplete="off">
+<form class = "edit-card" action="/<%= card.id %>/update?_method=PUT" method ="POST" autocomplete="off">
     <label>Question</label>
-    <input type="text" name="skill" value="<%= card.question%>">
+    <br>
+    <input type="text" name="question" value="<%= card.question%>">
+    <br><br>
     <label>Answer</label>
-    <input type="text" name="skill" value="<%= skill.answer%>">
+    <br>
+    <input type="text" name="answer" value="<%= card.answer%>">
     <button type="submit">Update Card</button>
   </form>
