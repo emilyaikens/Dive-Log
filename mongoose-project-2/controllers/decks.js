@@ -29,29 +29,16 @@ function show (req,res) {
     });
 };
 
+//delete whole deck and redirect to the my decks page
 function deleteDeck(req,res) {
-    console.log("deletedeck is called");
-    // Deck.findById(req.params.id, function (error, deck) {
-    //     deck.remove();
-    //     deck.save().then(function() {
-    //         res.redirect(`/decks/${deck._id}/edit`);
-    //     }).catch(function(error) {
-    //         return next(error);
-    //     });
-    // });
+    Deck.findById(req.params.id, function (error, deck) {
+        deck.remove();
+        deck.save(function(err) {
+            if (err) return res.redirect(`/decks`);
+            res.redirect(`/decks`);
+        });
+    });
 };
-
-// function deleteCard(req,res) {
-//     Deck.findOne({'cards._id': req.params.id}).then(function (deck) {
-//         const card = deck.cards.id(req.params.id);
-//         card.remove();
-//         deck.save().then(function() {
-//             res.redirect(`/decks/${deck._id}/edit`);
-//         }).catch(function(error) {
-//             return next(error);
-//         });
-//     });   
-//  };
 
 //find deck id and render the show page with all of the cards
 function flash (req, res) {
