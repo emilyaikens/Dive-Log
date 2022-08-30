@@ -4,6 +4,11 @@
 
 <h1><%= deck.deckName%></h1>
 
+<div><%= deck.cards%></div>
+
+<a href="/decks/<%= deck._id %>"><button>back</button></a>
+<a href="/decks/<%= deck._id %>"><button>flip</button></a>
+<a href="/decks/<%= deck._id %>"><button>next</button></a>
 <!-- <div class = "card-container">
     <div>
         card front
