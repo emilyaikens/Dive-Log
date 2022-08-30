@@ -29,9 +29,16 @@ function show (req,res) {
     });
 };
 
+function flash (req, res) {
+    Deck.findById(req.params.id, function (err, deck) {
+        res.render('decks/show', {title: `${deck.deckName}`, deck})
+    });
+};
+
   module.exports = {
     index,
     new: newDeck,
     create,
-    show
+    show,
+    flash
   };

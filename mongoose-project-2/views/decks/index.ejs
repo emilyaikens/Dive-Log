@@ -9,11 +9,7 @@
 
 <% decks.forEach(function(m) { %>
     <% if (user && user._id.equals(m.user)) { %>
-        <div>
-            <form action="/decks">
-                <input type="submit" value="<%= m.deckName %>">
-            </form>
-        <!-- </div><button><%= m.deckName %></button> -->
+        <div><a href="/decks/<%= m._id %>"><%= m.deckName %></a></div>
       <% } %>
 <% }); %>
 
