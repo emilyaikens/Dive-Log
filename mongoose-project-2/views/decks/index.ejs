@@ -1,15 +1,10 @@
 <%- include('../partials/header') %>
 
 <h1>my decks</h1>
-<!-- <% decks.forEach(function(d) { %>
-    <% if (user && user._id.equals(d.user)) { %>
-        <button a href = "/decks/<%= d._id %>"><%= d.deckName %></button>
-    <% } %>
-<% }); %> -->
 
 <% decks.forEach(function(m) { %>
     <% if (user && user._id.equals(m.user)) { %>
-        <div><a href="/decks/<%= m._id %>"><%= m.deckName %></a></div>
+        <button><a href="/decks/<%= m._id %>"><%= m.deckName %></a></button>
       <% } %>
 <% }); %>
 

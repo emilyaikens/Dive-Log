@@ -7,6 +7,6 @@ router.get('/', isLoggedIn, decksCtrl.index); //render the index page, aka "my d
 router.get('/new', isLoggedIn, decksCtrl.new); //render the create new deck page
 router.post('/', isLoggedIn, decksCtrl.create); //create a new deck object with info from new deck form
 router.get('/:id/edit', isLoggedIn, decksCtrl.show); //send info to edit page
-router.get('/:id', isLoggedIn, decksCtrl.flash);
+router.get('/:id', isLoggedIn, decksCtrl.flash); //renders cards in show view
 
 module.exports = router;

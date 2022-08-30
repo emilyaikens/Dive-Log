@@ -29,6 +29,7 @@ function show (req,res) {
     });
 };
 
+//find deck id and render the show page with all of the cards
 function flash (req, res) {
     Deck.findById(req.params.id, function (err, deck) {
         res.render('decks/show', {title: `${deck.deckName}`, deck})
@@ -40,5 +41,5 @@ function flash (req, res) {
     new: newDeck,
     create,
     show,
-    flash
+    flash,
   };
