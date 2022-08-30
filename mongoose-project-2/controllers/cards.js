@@ -13,8 +13,17 @@ function create(req, res) {
  };
 
  function deleteCard(req,res) {
-
+    Deck.findOne({'cards._id': req.params.id}).then(function (deck) {
+        const card = deck.cards.id(req.params.id);
+        card.remove();
+        deck.save().then(function() {
+            res.redirect(`/decks/${deck._id}/edit`);
+        }).catch(function(error) {
+            return next(error);
+        });
+    });   
  };
+
 module.exports = {
     create,
     delete: deleteCard,
