@@ -21,4 +21,5 @@ function create (req,res) {
   module.exports = {
     index,
     new: newDeck,
+    create,
   };
