@@ -24,7 +24,12 @@ function create(req, res) {
     });   
  };
 
+ function show (req,res) {
+    console.log("")
+ };
+
 module.exports = {
     create,
     delete: deleteCard,
+    show,
   };

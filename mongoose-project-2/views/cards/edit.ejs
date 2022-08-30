@@ -1,0 +1,12 @@
+<%- include('../partials/header') %>
+
+<h2>Edit Card</h2>
+
+<!-- form to edit card -->
+<form class = "edit-card-form" action="?_method=PUT" method ="POST" autocomplete="off">
+    <label>Question</label>
+    <input type="text" name="skill" value="<%= card.question%>">
+    <label>Answer</label>
+    <input type="text" name="skill" value="<%= skill.answer%>">
+    <button type="submit">Update Card</button>
+  </form>

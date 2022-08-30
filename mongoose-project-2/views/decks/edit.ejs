@@ -22,20 +22,19 @@
     <% deck.cards.forEach(function(card){ %>
         <div>Question: <%= card.question%></div>
         <div>Answer: <%= card.answer%></div>
+<!-- delete card         -->
         <form action="/<%= card._id %>/cards?_method=DELETE"
             class="delete-card" method="POST">
             <button type="submit">delete</button>
         </form>
-        <form action="/<%= card._id %>/cards/edit?_method=PUT"
-            class="delete-card" method="POST">
-            <button type="submit">edit</button>
-        </form>
+<!-- send info card info to controller, will redirect to edit page         -->
+        <button><a href="/<%= card._id %>/edit">edit</a></button>
         <br>
     <% }); %>    
 <% } else { %>
     <div>There are no cards in this deck yet</div>
 <% }; %>
-
+<br>
 <form action="/decks/<%= deck._id %>?_method=DELETE"
     class="delete-deck" method="POST">
     <button type="submit">delete deck</button>
