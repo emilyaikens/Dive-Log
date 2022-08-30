@@ -2,7 +2,8 @@
 
 <h2>Edit Card</h2>
 
-<form class = "edit-card" action="/<%= card.id %>/update?_method=PUT" method ="POST" autocomplete="off">
+<form class = "edit-card" action="/<%= card._id %>/update?_method=PUT" 
+        method ="POST" autocomplete="off">
     <label>Question</label>
     <br>
     <input type="text" name="question" value="<%= card.question%>">

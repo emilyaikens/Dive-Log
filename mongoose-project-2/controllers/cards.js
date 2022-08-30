@@ -33,8 +33,13 @@ function create(req, res) {
         });  
 };
 
+function update(req,res) {
+    console.log("update function working");
+};
+
 module.exports = {
     create,
     delete: deleteCard,
     show,
+    update,
   };
