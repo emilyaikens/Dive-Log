@@ -4,18 +4,13 @@
 
 <h1><%= deck.deckName%></h1>
 
-<div><%= deck.cards[0].question%></div>
+<% if (deck.cards.length) { %>
+    <div><%= deck.cards[0].question%></div>
+    <a href="/decks/<%= deck._id %>"><button>back</button></a>
+    <a href="/decks/<%= deck._id %>"><button>flip</button></a>
+    <a href="/decks/<%= deck._id %>"><button>next</button></a>
+<% } else { %>
+    <div>you have no cards yet</div>
+    <a href="/decks/<%= deck._id %>/edit"><button>Add Cards</button></a>
+<% }; %>
 
-<a href="/decks/<%= deck._id %>"><button>back</button></a>
-<a href="/decks/<%= deck._id %>"><button>flip</button></a>
-<a href="/decks/<%= deck._id %>"><button>next</button></a>
-<!-- <div class = "card-container">
-    <div>
-        card front
-        card back
-    </div>
-</div> -->
-
-<!-- button: back
-button: flip
-button: next -->

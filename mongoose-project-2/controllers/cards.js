@@ -5,8 +5,10 @@ const Deck = require('../models/decks');
 function create(req, res) {
     req.body.user = req.user._id;
     Deck.findById(req.params.id, function (error, deck) {
-        deck.cards.push(req.body);
+        deck.cards.push(req.body); //add form info to card schema
         deck.save(function (error) {
+            console.log(deck.display);
+            console.log(deck.cards[0]);
             res.redirect(`/decks/${deck._id}/edit`);
         });
     });
