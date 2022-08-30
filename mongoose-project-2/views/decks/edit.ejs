@@ -4,6 +4,7 @@
 
 <h2>New Card</h2>
 
+<!-- form to add new card -->
 <form id="add-card-form" action="/cards/new" method="POST">
     <label>Question</label>
     <input name = "question" type = "string">
@@ -16,6 +17,7 @@
 
 <h2>My Cards</h2>
 
+<!-- if there are cards, then list them, otherwise say "no cards in deck" -->
 <% if (deck.cards.length) { %>
     <% deck.cards.forEach(function(card){ %>
         <div>Question: <%= card.question%></div>
