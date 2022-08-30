@@ -34,7 +34,16 @@ function create(req, res) {
 };
 
 function update(req,res) {
-    console.log("update function working");
+    Deck.findOne({'cards._id': req.params.id}).then(function (deck) {
+        const card = deck.cards.id(req.params.id);
+        card.question = req.body.question;
+        card.answer = req.body.answer;
+        deck.save().then(function() {
+            res.redirect(`/decks/${deck._id}/edit`);
+        }).catch(function(error) {
+            return next(error);
+        });
+    });    
 };
 
 module.exports = {
