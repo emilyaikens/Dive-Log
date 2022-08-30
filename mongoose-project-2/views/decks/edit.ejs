@@ -22,11 +22,11 @@
     <% deck.cards.forEach(function(card){ %>
         <div>Question: <%= card.question%></div>
         <div>Answer: <%= card.answer%></div>
-        <form action="/<%= deck._id %>/cards?_method=DELETE"
+        <form action="/<%= card._id %>/cards?_method=DELETE"
             class="delete-card" method="POST">
             <button type="submit">delete</button>
         </form>
-        <form action="/<%= deck._id %>/cards/edit?_method=PUT"
+        <form action="/<%= card._id %>/cards/edit?_method=PUT"
             class="delete-card" method="POST">
             <button type="submit">edit</button>
         </form>

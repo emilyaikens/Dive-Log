@@ -12,6 +12,10 @@ function create(req, res) {
     });
  };
 
+ function deleteCard(req,res) {
+
+ };
 module.exports = {
     create,
+    delete: deleteCard,
   };
