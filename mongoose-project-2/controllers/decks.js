@@ -15,13 +15,20 @@ function create (req,res) {
     const deck = new Deck(req.body);
     deck.save(function(err) {
         if (err) return res.redirect('/deck/new');
-        res.redirect('/decks');
-        // res.redirect(`/decks/${deck._id}/edit`);
-    })
+        //res.redirect('/decks');
+        res.redirect(`/decks/${deck._id}/edit`);
+    });
+};
+
+function show (req,res) {
+    Deck.findById(req.params.id, function (error, deck) {
+        res.render('decks/edit', {title: "Edit Deck", deck})
+    });
 };
 
   module.exports = {
     index,
     new: newDeck,
     create,
+    show
   };
