@@ -14,6 +14,7 @@ require('./config/passport');
 
 var indexRouter = require('./routes/index');
 var decksRouter = require('./routes/decks');
+var cardsRouter = require('./routes/cards');
 
 var app = express();
 
@@ -44,6 +45,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/decks', decksRouter);
+app.use('/', cardsRouter);
 
 
 // catch 404 and forward to error handler
