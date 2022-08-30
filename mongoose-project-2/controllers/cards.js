@@ -1,14 +1,17 @@
 const Deck = require('../models/decks');
 
-function createCard (req,res) {
+
+
+function create(req, res) {
     req.body.user = req.user._id;
-    const card = new Deck(req.body);
-    deck.save(function(err) {
-        if (err) return res.redirect('/deck/new');
-        res.redirect(`/decks/${deck._id}/edit`);
+    Deck.findById(req.params.id, function (error, deck) {
+        deck.cards.push(req.body);
+        deck.save(function (error) {
+            res.redirect(`/decks/${deck._id}/edit`);
+        });
     });
-};
+ };
 
 module.exports = {
-    create: createCard,
+    create,
   };

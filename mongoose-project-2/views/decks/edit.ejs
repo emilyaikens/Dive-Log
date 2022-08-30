@@ -5,7 +5,7 @@
 <h2>New Card</h2>
 
 <!-- form to add new card -->
-<form id="add-card-form" action="/cards/new" method="POST">
+<form id="add-card-form" action="/<%= deck._id%>/cards/new" method="POST">
     <label>Question</label>
     <input name = "question" type = "string">
     <br>
