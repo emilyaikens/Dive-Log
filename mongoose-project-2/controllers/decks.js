@@ -11,10 +11,12 @@ function newDeck (req, res) {
 };
 
 function create (req,res) {
+    req.body.user = req.user._id;
     const deck = new Deck(req.body);
     deck.save(function(err) {
         if (err) return res.redirect('/deck/new');
-        res.redirect(`/decks/${deck._id}/edit`);
+        res.redirect('/decks');
+        // res.redirect(`/decks/${deck._id}/edit`);
     })
 };
 

@@ -5,6 +5,6 @@ const isLoggedIn = require('../config/auth');
 
 router.get('/', isLoggedIn, decksCtrl.index);
 router.get('/new', isLoggedIn, decksCtrl.new); //renders view/decks/new
-router.get('/', isLoggedIn, decksCtrl.create);
+router.post('/', isLoggedIn, decksCtrl.create);
 
 module.exports = router;

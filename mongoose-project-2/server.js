@@ -38,7 +38,7 @@ app.use(passport.session());
 app.use(function(req,res,next) {
   res.locals.user = req.user; // can be accessed anywhere with req.user
   next(); //go to the next function
-})
+});
 
 app.use(express.static(path.join(__dirname, 'public')));
 

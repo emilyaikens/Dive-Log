@@ -1,11 +1,22 @@
 <%- include('../partials/header') %>
 
 <h1>my decks</h1>
-<% decks.forEach(function(d) { %>
+<!-- <% decks.forEach(function(d) { %>
     <% if (user && user._id.equals(d.user)) { %>
         <button a href = "/decks/<%= d._id %>"><%= d.deckName %></button>
     <% } %>
+<% }); %> -->
+
+<% decks.forEach(function(m) { %>
+    <% if (user && user._id.equals(m.user)) { %>
+        <div>
+            <form action="/decks">
+                <input type="submit" value="<%= m.deckName %>">
+            </form>
+        <!-- </div><button><%= m.deckName %></button> -->
+      <% } %>
 <% }); %>
+
 <div>
     <form action="/decks/new">
         <input type="submit" value="+">
