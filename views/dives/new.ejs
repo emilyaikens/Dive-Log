@@ -1,3 +1,82 @@
 <%- include('../partials/header') %>
 
 <h1>New Dive</h1>
+
+<form id="new-dive-form" action="/" method="POST">
+    <label>Dive Number
+        <input type="Number" name="number">
+    </label><br>
+    <label>Dive Site
+        <input type="String" name="site">            
+    </label><br>
+    <label>Dive Buddy
+        <input type="String" name="buddy">            
+    </label><br>    
+    <label>Date
+        <input type="datetime-local" name="date" value="datetime-local">
+    </label><br>
+    <label>Exposure Protection
+        <input type="String" name="protection">
+    </label><br>
+    <label>Weight
+        <input type="Number" name="weight">
+    </label><br>  
+    <label>
+        <select name="weightUnits">
+            <option value="kg">kg</option>
+            <option value="ib" selected>ib</option>
+        </select>
+    </label><br>
+    <label>Entry
+        <select name="entry">
+            <option value="shore">shore</option>
+            <option value="boat" selected>boat</option>
+            <option value="other" selected>other</option>
+        </select>
+    </label><br>
+    <label>Conditions
+        <input type="String" name="conditions">
+    </label><br>  
+    <label>Air Temp
+        <input type="Number" name="airTemp">
+    </label><br> 
+    <label>Surface Temp
+        <input type="Number" name="surfaceTemp">
+    </label><br> 
+    <label>Water Temp
+        <input type="Number" name="waterTemp">
+    </label><br>   
+    <label>
+        <select name="tempUnits">
+            <option value="C">C</option>
+            <option value="F" selected>F</option>
+        </select>
+    </label><br>
+    <label>Starting Air Pressure
+        <input type="Number" name="startAir">
+    </label><br>
+    <label>Ending Air Pressure
+        <input type="Number" name="endAir">
+    </label><br> 
+    <label>
+        <select name="airUnits">
+            <option value="psi" selected>psi</option>
+            <option value="bar">bar</option>
+        </select>
+    </label><br>  
+    <label>Max Depth
+        <input type="Number" name="maxDepth">
+    </label><br>      
+    <label>
+        <select name="depthUnits">
+            <option value="ft" selected>ft</option>
+            <option value="m">m</option>
+        </select>
+    </label><br>  
+    <label>Bottom Time
+        <input type="String" name="bottomTime">
+    </label><br>    
+    <label>Notes
+        <input type="String" name="notes">
+    </label><br>
+</form>
