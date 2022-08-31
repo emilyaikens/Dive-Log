@@ -10,8 +10,8 @@
 <body>
 <nav>
     <% if (user) { %>
-        <a href="/decks" <%- title === '' ? 'class="active"' : '' %>>MY DECKS</a>
-        <a href="/decks/new" <%- title === '' ? 'class="active"' : '' %>>NEW DECK</a>
+        <a href="/dives" <%- title === '' ? 'class="active"' : '' %>>MY DIVES</a>
+        <a href="/dives/new" <%- title === '' ? 'class="active"' : '' %>>NEW DIVE</a>
         <a href="/logout">LOG OUT</a>
     <% } else { %>
         <a href="/auth/google" class="login">LOG IN</a>
