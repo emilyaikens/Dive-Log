@@ -5,7 +5,7 @@
 <h1><%= deck.deckName%></h1>
 
 <% if (deck.cards.length) { %>
-    <div><%= deck.cards[0].question%></div>
+
     <a href="/decks/<%= deck._id %>"><button>back</button></a>
     <a href="/decks/<%= deck._id %>"><button>flip</button></a>
     <a href="/decks/<%= deck._id %>"><button>next</button></a>

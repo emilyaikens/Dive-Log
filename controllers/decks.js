@@ -1,5 +1,5 @@
 const Deck = require('../models/decks');
-const Display = require('../models/displays');
+const Display = require('../models/displays')
 
 //sends all deck information to the "all decks" page, aka views/decks/index
 function index(req, res) {
@@ -26,9 +26,7 @@ function create (req,res) {
 //send selected deck information to the "edit deck" page
 function show (req,res) {
     Deck.findById(req.params.id, function (error, deck) {
-        Display.find({deck: deck._id}, function (error, display) {
-            res.render('decks/edit', {title: "Edit Deck", deck, display })
-        });
+        res.render('decks/edit', {title: "Edit Deck", deck})
     });
 };
 
@@ -46,7 +44,9 @@ function deleteDeck(req,res) {
 //find deck id and render the show page with all of the cards
 function flash (req, res) {
     Deck.findById(req.params.id, function (err, deck) {
-        res.render('decks/show', {title: `${deck.deckName}`, deck})
+        Display.find({deck: deck._id}, function (err, displays) {
+            res.render('decks/show', {title: `${deck.deckName}`, deck, displays})
+        })
     });
 };
 
