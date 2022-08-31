@@ -10,15 +10,11 @@ function create(req, res) {
         deck.save(function (error) {
             res.redirect(`/decks/${deck._id}/edit`);
         });
-        pushTest(deck, req);
+        if (deck.cards.length === 1) { //
+            req.body.deck = req.params.id;
+            Display.create(req.body);
+        };
     });
- };
-
- //try to make this function work now that you've moved the model
- function pushTest(deck, req) {
-    if (deck.cards.length === 1) {
-        Display.create(req.body);
-    };
  };
 
  function deleteCard(req,res) {

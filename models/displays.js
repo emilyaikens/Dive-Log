@@ -5,7 +5,8 @@ const displaySchema = new Schema ({
     question: {
         type: String,
         required: true
-    }
+    },
+    deck: {type: Schema.Types.ObjectId, ref: 'Deck' }
 }, {
     timestamps: true
 });
