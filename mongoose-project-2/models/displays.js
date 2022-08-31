@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const displaySchema = new Schema ({
-    view: {
+    question: {
         type: String,
         required: true
     }

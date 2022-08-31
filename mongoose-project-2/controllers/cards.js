@@ -1,5 +1,5 @@
 const Deck = require('../models/decks');
-const Display = require('../models/display');
+const Display = require('../models/displays');
 
 
 
@@ -10,16 +10,16 @@ function create(req, res) {
         deck.save(function (error) {
             res.redirect(`/decks/${deck._id}/edit`);
         });
-        pushTest(deck);
+        pushTest(deck, req);
     });
  };
 
  //try to make this function work now that you've moved the model
- function pushTest(deck) {
-    //deck.display.push(deck.cards[0]);
-    console.log("deck array" + deck.display);
-    console.log("question: " + deck.cards[0].question);
- }
+ function pushTest(deck, req) {
+    if (deck.cards.length === 1) {
+        Display.create(req.body);
+    };
+ };
 
  function deleteCard(req,res) {
     Deck.findOne({'cards._id': req.params.id}).then(function (deck) {
