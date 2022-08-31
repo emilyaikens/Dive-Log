@@ -20,8 +20,15 @@ function create (req, res) {
     });
 };
 
+function show (req, res) {
+    Dive.findById(req.params.id, function (err, dive) {
+        res.render('dives/show', {title: `${dive.number}`, dive })
+    });
+};
+
 module.exports = {
     index,
     new: newDive,
-    create
+    create,
+    show
   };
