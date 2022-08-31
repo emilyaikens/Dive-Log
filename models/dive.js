@@ -6,6 +6,7 @@ const diveSchema = new Schema ({
     site: {type: String},
     buddy: {type: String},
     date: {type: Date},
+    time: {type: String},
     protection: {type: String},
     weight: {type: Number},
     weightUnits: {
