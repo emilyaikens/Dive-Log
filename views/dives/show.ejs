@@ -1,3 +1,63 @@
 <%- include('../partials/header') %>
 
-<h1>show</h1>
+<h1>Dive Number <%= dive.number %></h1>
+
+<h2>Details</h2>
+
+<!-- dive log details -->
+<div>Dive Site</div>
+<div><%= dive.site%></div>
+
+<div>Dive Buddy</div>
+<div><%= dive.buddy%></div>
+
+<div>Date</div>
+<div><%= dive.date%></div>
+
+<div>Time</div>
+<div><%= dive.time%></div>
+
+<div>Exposure Protection</div>
+<div><%= dive.protection%></div>
+
+<div>Weight</div>
+<div><%= dive.weight%></div>
+<div><%= dive.weightUnits%></div>
+
+<div>Entry</div>
+<div><%= dive.entry%></div>
+
+<div>Conditions</div>
+<div><%= dive.conditions%></div>
+
+<div>Air Temp</div>
+<div><%= dive.airTemp%></div>
+<div><%= dive.tempUnits%></div>
+
+<div>Surface Temp</div>
+<div><%= dive.surfaceTemp%></div>
+<div><%= dive.tempUnits%></div>
+
+<div>Water Temp</div>
+<div><%= dive.waterTemp%></div>
+<div><%= dive.tempUnits%></div>
+
+<div>Starting Air Pressure</div>
+<div><%= dive.startAir%></div>
+<div><%= dive.airUnits%></div>
+
+<div>Ending Air Pressure</div>
+<div><%= dive.endAir%></div>
+<div><%= dive.airUnits%></div>
+
+<div>Maximum Depth</div>
+<div><%= dive.maxDepth%></div>
+<div><%= dive.depthUnits%></div>
+
+<div>Bottom Time</div>
+<div><%= dive.bottomTime%></div>
+
+<div>Notes</div>
+<div><%= dive.notes%></div>
+
+<a href="/dives/<%= dive._id%>/edit"><button>Edit Log</button></a>
