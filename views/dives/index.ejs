@@ -8,12 +8,13 @@
     </form>
 </div>
 
-<% if (dives.number) { %>
+<% if (dives.length) { %>
 <table>
     <thead>
-        <th>Number</th>
+        <th>Dive Number</th>
         <th>Date</th>
         <th>Dive Site</th>
+        <th>Details</th>
     </thead>
     <tbody>
         <% dives.forEach(function(d) { %>
@@ -29,5 +30,5 @@
     </tbody>
 </table>
 <% } else { %>
-    <div>you have no logged dives</div>
+    <div>no logged dives yet</div>
 <% }; %>
