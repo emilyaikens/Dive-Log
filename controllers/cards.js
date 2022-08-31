@@ -1,8 +1,7 @@
 const Deck = require('../models/decks');
 const Display = require('../models/displays');
 
-
-
+//create new card
 function create(req, res) {
     req.body.user = req.user._id;
     Deck.findById(req.params.id, function (error, deck) {
@@ -17,6 +16,7 @@ function create(req, res) {
     });
  };
 
+ //delete card from deck
  function deleteCard(req,res) {
     Deck.findOne({'cards._id': req.params.id}).then(function (deck) {
         const card = deck.cards.id(req.params.id);
@@ -29,6 +29,7 @@ function create(req, res) {
     });   
  };
 
+ //render the edit card page
  function show (req,res) {
     Deck.findOne({'cards._id': req.params.id}).then(function (deck) {
         const card = deck.cards.id(req.params.id);
@@ -38,6 +39,7 @@ function create(req, res) {
         });  
 };
 
+//updates the card. takes info from edit card form and then redirects back to the edit page
 function update(req,res) {
     Deck.findOne({'cards._id': req.params.id}).then(function (deck) {
         const card = deck.cards.id(req.params.id);
