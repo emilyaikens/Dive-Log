@@ -2,7 +2,7 @@
 
 <h1>editing page</h1>
 
-<form class = "edit-dive-form" action="/<%= dive._id %>/update?_method=PUT" 
+<form class = "edit-dive-form" action="dives/<%= dive._id %>/update?_method=PUT" 
     method ="POST" autocomplete="off">
     <label>Dive Number
         <input type="Number" name="number" value="<%= dive.number%>">
