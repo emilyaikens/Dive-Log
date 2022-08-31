@@ -23,6 +23,7 @@ const diveSchema = new Schema ({
     depthUnits: {type: String},
     bottomTime: {type: Number},
     notes: {type: String},
+    user: {type: Schema.Types.ObjectId, ref: 'User'},
 }, {
     timestamps: true
 });
