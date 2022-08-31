@@ -41,11 +41,25 @@ function updateDive (req, res) {
     });
 };    
 
+function deleteDive (req,res) {
+    Dive.findById(req.params.id, function (error, dive) {
+        dive.remove(function (err) {
+            if (err) return res.redirect('/dives');
+            res.redirect('/dives');
+        });
+        // dive.save(function(err) {
+        //     if (err) return res.redirect(`/decks`);
+        //     res.redirect(`/decks`);
+        // });
+    });
+};
+
 module.exports = {
     index,
     new: newDive,
     create,
     show, 
     edit,
-    update: updateDive
+    update: updateDive,
+    delete: deleteDive
   };
