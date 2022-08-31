@@ -1,4 +1,5 @@
 const Deck = require('../models/decks');
+const Display = require('../models/display');
 
 
 
@@ -13,6 +14,7 @@ function create(req, res) {
     });
  };
 
+ //try to make this function work now that you've moved the model
  function pushTest(deck) {
     //deck.display.push(deck.cards[0]);
     console.log("deck array" + deck.display);
