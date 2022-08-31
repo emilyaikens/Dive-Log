@@ -1,7 +1,8 @@
 <%- include('../partials/header') %>
 
-<h1>editing page</h1>
+<h1>Edit Dive Number <%= dive.number%></h1>
 
+<!-- form to edit dive -->
 <form class = "edit-dive-form" action="/dives/<%= dive._id %>/update?_method=PUT" 
     method ="POST" autocomplete="off">
     <label>Dive Number
@@ -88,3 +89,9 @@
 </form>
 
 <div>Danger Zone</div>
+
+<!-- delete dive         -->
+<form action="/<%= card._id %>/cards?_method=DELETE"
+    class="delete-card" method="POST">
+    <button type="submit">delete</button>
+</form>

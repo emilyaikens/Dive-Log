@@ -35,9 +35,9 @@ function edit (req, res) {
 function updateDive (req, res) {
     Dive.findById(req.params.id, function (err, dive) {
         dive.update(req.body, function (err, dive) {
-                if (err) return res.redirect('/dives');
-                res.redirect('/dives')
+            if (err) return res.redirect('/dives');
         });
+        res.redirect(`/dives/${dive._id}`);
     });
 };    
 
