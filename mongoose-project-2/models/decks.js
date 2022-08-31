@@ -18,20 +18,12 @@ const cardSchema = new Schema ({
     timestamps: true
 });
 
-const displaySchema = new Schema ({
-    view: {
-        type: String,
-        required: true
-    }
-});
-
 const deckSchema = new Schema ({
     deckName: {
         type: String,
         required: true
     },
     user: {type: Schema.Types.ObjectId, ref: 'User'},
-    display: [displaySchema],
     cards: [cardSchema]
 }, {
     timestamps: true

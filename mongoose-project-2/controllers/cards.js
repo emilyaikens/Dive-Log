@@ -7,12 +7,17 @@ function create(req, res) {
     Deck.findById(req.params.id, function (error, deck) {
         deck.cards.push(req.body); //add form info to card schema
         deck.save(function (error) {
-            console.log(deck.display);
-            console.log(deck.cards[0]);
             res.redirect(`/decks/${deck._id}/edit`);
         });
+        pushTest(deck);
     });
  };
+
+ function pushTest(deck) {
+    //deck.display.push(deck.cards[0]);
+    console.log("deck array" + deck.display);
+    console.log("question: " + deck.cards[0].question);
+ }
 
  function deleteCard(req,res) {
     Deck.findOne({'cards._id': req.params.id}).then(function (deck) {
