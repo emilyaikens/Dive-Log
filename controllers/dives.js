@@ -26,9 +26,16 @@ function show (req, res) {
     });
 };
 
+function edit (req, res) {
+    Dive.findById(req.params.id, function (error, dive) {
+        res.render('dives/edit', {title: "Edit Dive", dive})
+    });
+}
+
 module.exports = {
     index,
     new: newDive,
     create,
-    show
+    show, 
+    edit
   };

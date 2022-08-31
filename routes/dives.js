@@ -7,5 +7,6 @@ router.get('/', isLoggedIn, divesCtrl.index);
 router.get('/new', isLoggedIn, divesCtrl.new);
 router.post('/', isLoggedIn, divesCtrl.create);
 router.get('/:id', isLoggedIn, divesCtrl.show);
+router.get('/:id/edit', isLoggedIn, divesCtrl.edit);
 
 module.exports = router;
