@@ -21,7 +21,7 @@ router.get('/auth/google', passport.authenticate( //path
 router.get('/oauth2callback', passport.authenticate( //path
   'google', //strategy
     {
-      successRedirect: '/decks', //where to send user if the login is successful
+      successRedirect: '/dives', //where to send user if the login is successful
       failureRedirect: '/' //where to send user if login fails
     }
 ));

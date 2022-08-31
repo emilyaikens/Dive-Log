@@ -1,0 +1,33 @@
+<%- include('../partials/header') %>
+
+<h1>my dives</h1>
+
+<div>
+    <form action="/dives/new">
+        <input type="submit" value="add new dive to log">
+    </form>
+</div>
+
+<% if (dives.number) { %>
+<table>
+    <thead>
+        <th>Number</th>
+        <th>Date</th>
+        <th>Dive Site</th>
+    </thead>
+    <tbody>
+        <% dives.forEach(function(d) { %>
+            <% if (user && user._id.equals(d.user)) { %>
+                <tr>
+                    <td><%= d.number%></td>
+                    <td><%= d.date%></td>
+                    <td><%= d.site%></td>
+                    <td><a class ="dive-details" href="/dives/<%= d._id %>">details</a></td>
+                </tr>
+              <% } %>
+        <% }) %>
+    </tbody>
+</table>
+<% } else { %>
+    <div>you have no logged dives</div>
+<% }; %>
