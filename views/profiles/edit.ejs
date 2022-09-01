@@ -2,7 +2,7 @@
 
 <h1>Edit Profile</h1>
 
-<form id="edit-profile-form" action="/<%= profile._id%>/update?_method=PUT" method="POST">
+<form id="edit-profile-form" action="/profile/<%= profile._id%>/update?_method=PUT" method="POST">
     <label>Username
         <input type="String" name="nickname" value="<%= profile.nickname%>">
     </label><br>
