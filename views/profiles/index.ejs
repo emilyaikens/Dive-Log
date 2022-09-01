@@ -2,14 +2,21 @@
 
 <h1><%= user.name%></h1>
 
-
-
 <% if (profile) { %>
-    <div><%= user.name%></div>
     <div>Username:</div>
+    <div><%= profile.nickname%></div>    
+
+    <div>Started Diving:</div>
     <div><%= profile.startDate%></div>
+
+    <div>Favorite dive site:</div>
+    <div><%= profile.favorite%></div>    
+
     <br>
     <a href="/profile/edit"><button>Edit Profile</button></a>
+
 <% } else { %>  
+
     <a href="/profile/new"><button>Add Information</button></a>
+
 <% } %>
