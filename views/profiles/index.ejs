@@ -23,3 +23,31 @@
     <a href="/profile/new"><button>Add Information</button></a>
 
 <% } %>
+
+<% if  ( profile.certifcates ) { %>
+    
+    <div>My Certifications</div>
+
+    <table>
+        <thead>
+            <th>&nbsp</th>
+            <th>Certification</th>
+            <th>Expires</th>
+        </thead>
+        <tbody>
+            <% profile.certificates.forEach(function(c) { %>
+                <% if (user && user._id.equals(c.user)) { %>
+                    <tr>
+                        <td><a class ="dive-details" href="/dives/<%= d._id %>">details</a></td>
+                        <td><%= c.cert%></td>
+                        <td><%= d.expiration%></td>
+                    </tr>
+                  <% }
+                }); %>
+        </tbody>
+    </table>
+
+    <% } else { %>
+        <br>
+        <a href=""><button>Add Certifications</button></a>
+    <% }; %>

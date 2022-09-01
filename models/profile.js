@@ -2,8 +2,9 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const certificateSchema = new Schema ({
-    certOrg: {type: String},
-    cert: {type: String},
+    cert: {
+        type: String,
+        required: true},
     expiration: {type: String}
 }, {
     timestamps: true
