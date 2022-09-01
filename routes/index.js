@@ -4,12 +4,8 @@ const passport = require('passport');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Get Flashed' });
+  res.render('index', { title: 'Dive Log' });
 });
-//eventually change to :
-// router.get('/', function(req, res, next) {
-//   res.redirect('/movies');
-// });
 
 //google login route
 router.get('/auth/google', passport.authenticate( //path
