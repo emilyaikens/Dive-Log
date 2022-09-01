@@ -2,9 +2,14 @@
 
 <h1><%= user.name%></h1>
 
-<div><%= user.name%></div>
 
-<div><%= profile%></div>
 
-<a href="/profile/edit"><button>Add Information</button></a>
-
+<% if (profile) { %>
+    <div><%= user.name%></div>
+    <div>Username:</div>
+    <div><%= profile.startDate%></div>
+    <br>
+    <a href="/profile/edit"><button>Edit Profile</button></a>
+<% } else { %>  
+    <a href="/profile/new"><button>Add Information</button></a>
+<% } %>
