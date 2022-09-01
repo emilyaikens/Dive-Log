@@ -1,6 +1,6 @@
 <%- include('../partials/header') %>
 
-<h1>my dives</h1>
+<h1>Dive Log</h1>
 
 <div>
     <form action="/dives/new">
@@ -8,7 +8,8 @@
     </form>
 </div>
 
-<% if (dives.length) { %>
+<h2>My Dives</h2>
+
 <table>
     <thead>
         <th>Dive Number</th>
@@ -25,10 +26,8 @@
                     <td><%= d.site%></td>
                     <td><a class ="dive-details" href="/dives/<%= d._id %>">details</a></td>
                 </tr>
-              <% } %>
-        <% }) %>
+              <% }
+            }); %>
     </tbody>
 </table>
-<% } else { %>
-    <div>no logged dives yet</div>
-<% }; %>
+
