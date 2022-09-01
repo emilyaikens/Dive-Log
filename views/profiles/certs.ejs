@@ -13,26 +13,27 @@
     <input id="new-cert-button" type="submit" value="Add Cert">
 </form>
 
-<% profile.certs.forEach(function(c) { %>
-    <table>
-        <thead>
-            <th>&nbsp</th>
-            <th>Certificate</th>
-            <th>Expiry</th>
-        </thead>
-        <tbody>
-            <tr>
-                <td class="remove-column">
-                    <form action="/profile/cert/<%= c._id%>?_method=DELETE"
-                        class="delete-cert-form" method="POST">
-                        <button type="submit">X</button>
-                    </form>
-                        </td>
-                <td><%= c.cert %></td>
-                <td><%= c.expiration %></td>
-            </tr>
-        </tbody>
-    </table>
-<% }); %>
+<table>
+    <thead>
+        <th>&nbsp</th>
+        <th>Certificate</th>
+        <th>Expiry</th>
+    </thead>
+    <tbody>
+        <% profile.certs.forEach(function(c) { %>
+        <tr>
+            <td class="remove-column">
+                <form action="/profile/cert/<%= c._id%>?_method=DELETE"
+                    class="delete-cert-form" method="POST">
+                    <button type="submit">X</button>
+                </form>
+            </td>
+            <td><%= c.cert %></td>
+            <td><%= c.expiration %></td>
+        </tr>
+        <% }); %>
+    </tbody>
+</table> <br>
+
 
 <a href="/profile"><button>Done</button></a>

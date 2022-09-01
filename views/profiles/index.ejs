@@ -28,25 +28,24 @@
     
     <div>My Certifications</div>
 
-    <% profile.certs.forEach(function(c) { %>
-        <table>
-            <thead>
-                <th>Certificate</th>
-                <th>Expiry</th>
-            </thead>
+    <table>
+        <thead>
+            <th>Certificate</th>
+            <th>Expiry</th>
+        </thead>
             <tbody>
+                <% profile.certs.forEach(function(c) { %>
                 <tr>
                     <td><%= c.cert %></td>
                     <td><%= c.expiration %></td>
                 </tr>
+                <% }); %>
             </tbody>
-        </table>
+    </table>
 
-        <a href="/profile/certs"><button>Add / Delete Certifications</button></a>
+    <a href="/profile/certs"><button>Add / Delete Certifications</button></a>
 
-    <% }); %>
-
-    <% } else { %>
-        <br>
-        <a href="/profile/certs"><button>Add</button></a>
-    <% }; %>
+<% } else { %>
+    <br>
+    <a href="/profile/certs"><button>Add</button></a>
+<% }; %>
