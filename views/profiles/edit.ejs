@@ -1,3 +1,18 @@
 <%- include('../partials/header') %>
 
-<h1>editing page</h1>
+<h1>Edit Profile</h1>
+
+<form id="edit-profile-form" action="/<%= profile._id%>/update?_method=PUT" method="POST">
+    <label>Username
+        <input type="String" name="nickname" value="<%= profile.nickname%>">
+    </label><br>
+    <label>When did you start diving?
+        <input type="String" name="startDate" value="<%= profile.startDate%>">            
+    </label><br>
+    <label>Favorite dive location?
+        <input type="String" name="favorite" value="<%= profile.favorite%>">            
+    </label><br>
+
+    <input id="edit-profile-button" type="submit" value="Update">
+</form>
+
