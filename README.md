@@ -1,4 +1,4 @@
-# Project 2: Get Flashed
+# Project 2: Dive Log
 
 ## Description:
 text
