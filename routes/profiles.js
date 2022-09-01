@@ -8,5 +8,6 @@ router.get('/new', isLoggedIn, profilesCtrl.new); //called from Add Information 
 router.post('/', isLoggedIn, profilesCtrl.create); //called from the form in the new view
 router.get('/edit', isLoggedIn, profilesCtrl.edit); //called from the index view, link to edit profile view
 router.put('/:id/update', isLoggedIn, profilesCtrl.update); //called from form in edit profile view
+router.get('/certs', isLoggedIn, profilesCtrl.cert); //called from the index view
 
 module.exports = router;

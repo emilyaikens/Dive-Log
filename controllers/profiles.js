@@ -41,10 +41,17 @@ function updateProfile (req,res) {
     });
 };
 
+function cert (req,res) {
+    Profile.findOne({'user': req.user}, function (err, profile) {
+        res.render('profiles/certs', {title: 'New Cert', profile})
+    }); 
+};
+
 module.exports = {
     index,
     new: newProfile,
     create: createProfile,
     edit: editProfile,
     update: updateProfile,
+    cert,
   };
