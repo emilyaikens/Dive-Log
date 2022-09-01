@@ -1,33 +1,36 @@
 <%- include('../partials/header') %>
 
-<h1>Dive Log</h1>
+<div id="index-body">
 
-<div>
-    <form action="/dives/new">
-        <input type="submit" value="add new dive">
+    <img id="index-img"src="https://i.imgur.com/azLDf2u.png">
+
+    <h1 id="index-h1">dive log</h1>
+
+    <form id="add-new-dive"action="/dives/new">
+        <input id="add-new-dive-button" type="submit" value="add new dive">
     </form>
+
+    <h2>my dives</h2>
+
+    <table>
+        <thead>
+            <th>Dive Number</th>
+            <th>Date</th>
+            <th>Dive Site</th>
+            <th>Details</th>
+        </thead>
+        <tbody>
+            <% dives.forEach(function(d) { %>
+                <% if (user && user._id.equals(d.user)) { %>
+                    <tr>
+                        <td><%= d.number%></td>
+                        <td><%= d.date%></td>
+                        <td><%= d.site%></td>
+                        <td><a class ="dive-details" href="/dives/<%= d._id %>">view</a></td>
+                    </tr>
+                <% }
+                }); %>
+        </tbody>
+    </table>
+
 </div>
-
-<h2>My Dives</h2>
-
-<table>
-    <thead>
-        <th>Dive Number</th>
-        <th>Date</th>
-        <th>Dive Site</th>
-        <th>Details</th>
-    </thead>
-    <tbody>
-        <% dives.forEach(function(d) { %>
-            <% if (user && user._id.equals(d.user)) { %>
-                <tr>
-                    <td><%= d.number%></td>
-                    <td><%= d.date%></td>
-                    <td><%= d.site%></td>
-                    <td><a class ="dive-details" href="/dives/<%= d._id %>">details</a></td>
-                </tr>
-              <% }
-            }); %>
-    </tbody>
-</table>
-

@@ -8,13 +8,13 @@
     <title><%= title %></title>
 </head>
 <body>
-<nav>
-    <% if (user) { %>
-        <a href="/dives" <%- title === '' ? 'class="active"' : '' %>>MY DIVES</a>
-        <a href="/dives/new" <%- title === '' ? 'class="active"' : '' %>>NEW DIVE</a>
-        <a href="/profile" <%- title === '' ? 'class="active"' : '' %>>MY PROFILE</a>
-        <a href="/logout">LOG OUT</a>
-    <% } else { %>
-        <a href="/auth/google" class="login">LOG IN</a>
-    <% } %>
-</nav>
+<header>
+    <ul>
+        <% if (user) { %>
+            <li><a class = "header" href="/dives" <%- title === '' ? 'class="active"' : '' %>>MY DIVES</a></li>
+            <li><a class = "header" href="/dives/new" <%- title === '' ? 'class="active"' : '' %>>NEW DIVE</a></li>
+            <li><a class = "header" href="/profile" <%- title === '' ? 'class="active"' : '' %>>MY PROFILE</a></li>
+            <li id="logout"><a class = "header" href="/logout">LOG OUT</a></li>
+        <% }; %>
+    </ul>    
+</header>
