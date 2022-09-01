@@ -2,3 +2,20 @@
 
 <h2>Add Certifications</h2>
 
+<form id="new-cert-form" action="/profile/add-cert" method="POST">
+    <label>Certification
+        <input type="String" name="cert">
+    </label><br>
+    <label>Expiry
+        <input type="String" name="expiration">            
+    </label><br>
+
+    <input id="new-cert-button" type="submit" value="Add Cert">
+</form>
+
+<% profile.certs.forEach(function(c) { %>
+    <div><%= c.cert %></div>
+    <div><%= c.expiration %></div>
+<% }); %>
+
+<a href="/profile"><button>Done</button></a>

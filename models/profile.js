@@ -13,7 +13,7 @@ const certificateSchema = new Schema ({
 const profileSchema = new Schema ({
     nickname: {type: String},
     startDate: {type: String},
-    certificates: [certificateSchema],
+    certs: [certificateSchema],
     favorite: {type: String},
     user: {type: Schema.Types.ObjectId, ref: 'User'},
 }, {

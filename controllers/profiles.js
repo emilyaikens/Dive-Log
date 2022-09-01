@@ -41,10 +41,21 @@ function updateProfile (req,res) {
     });
 };
 
+//called from link in profile index view
 function cert (req,res) {
     Profile.findOne({'user': req.user}, function (err, profile) {
         res.render('profiles/certs', {title: 'New Cert', profile})
     }); 
+};
+
+//called from form in certs view
+function add (req, res) {  
+    Profile.findOne({'user': req.user}, function (err, profile) {
+        profile.certs.push(req.body);
+        profile.save(function (err) {
+            res.redirect('/profile/certs')
+        });
+    });
 };
 
 module.exports = {
@@ -54,4 +65,5 @@ module.exports = {
     edit: editProfile,
     update: updateProfile,
     cert,
+    add
   };
