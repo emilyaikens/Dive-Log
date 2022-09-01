@@ -2,8 +2,9 @@ const Profile = require('../models/profile');
 
 
 function index(req, res) {
-    console.log('index function');
-    console.log('req.user');
+    Profile.findOne({'user': req.user}, function (err, profile) {
+        res.render('profiles/index', {title: 'My Profile', profile})
+    }); 
 };
 
 module.exports = {
