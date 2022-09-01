@@ -6,7 +6,7 @@ body {
   letter-spacing: 2px;
   background-color: #DDEAEF;
 }
-#index-body {
+#index-body , #show-body {
   margin-top: 320px;
 }
 header {
@@ -16,7 +16,9 @@ header {
   left: 0;
   right: 0;
   height: 80px;
+  z-index: 9999;
 }
+/* z index keeps header on top! */
 header * {
   display: inline-flex;
 }
@@ -63,24 +65,23 @@ input, select {
  form {
    margin: 5px;
  }
-
- /* view/dives/index */
-
  #add-new-dive {
   text-align: right;
 }
-#add-new-dive-button {
+#add-new-dive-button, #edit-log-dive-button {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   letter-spacing: 2px;
   padding: 10px;
   border-radius: 20px;
   border: solid #97AFB9;
 }
-#add-new-dive-button:hover {
+#add-new-dive-button:hover, #edit-log-dive-button:hover {
   background-color: #97AFB9;
   color: white;
 }
-#index-img {
+
+/* header images */
+#index-img, #show-img {
   position: absolute;
   top: 80px;
   left: 0px;
@@ -88,4 +89,21 @@ input, select {
   max-height: 300px;
   min-height: 300px;
   object-fit: cover;
+}
+.flex-container {
+  display: flex;
+}
+.flex-content {
+  margin-right: 40px;
+}
+footer {
+  background-color: #344A53;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 20px;
+}
+footer * {
+  display: inline-flex;
 }
