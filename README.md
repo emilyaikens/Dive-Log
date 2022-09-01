@@ -44,7 +44,7 @@ text
 
 * [Data Flow: Google Sheet](https://docs.google.com/spreadsheets/d/1FWgW4MXwyAINuuvfisloNnvXlRBv9NIRCU9RaLkd3xs/edit?usp=sharing)
 
-* [Progress Tracking/AAUs: Trello Board](https://trello.com/b/9zCsQ2QU/project-2-flash-cards)
+* [Progress Tracking/AAUs: Trello Board](https://trello.com/b/EORctDLm/dive-log)
 
 * [Wireframe Pages: Whimsical](https://whimsical.com/project-2-flash-cards-V4m9vgEdUeR6wBrFP1uoEr)
 
