@@ -7,7 +7,7 @@ function index(req, res) {
     }); 
 };
 
-function editProfile (req, res) {
+function newProfile (req, res) {
     Profile.findOne({'user': req.user}, function (err, profile) {
         res.render('profiles/new', {title: 'Edit Profile', profile})
     }); 
@@ -15,5 +15,5 @@ function editProfile (req, res) {
 
 module.exports = {
     index,
-    edit: editProfile,
+    new: newProfile,
   };

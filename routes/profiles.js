@@ -4,6 +4,7 @@ const profilesCtrl = require('../controllers/profiles');
 const isLoggedIn = require('../config/auth');
 
 router.get('/', isLoggedIn, profilesCtrl.index);
-router.get('/edit', isLoggedIn, profilesCtrl.edit);
+router.get('/edit', isLoggedIn, profilesCtrl.new);
+router.post('/', isLoggedIn, profilesCtrl.create);
 
 module.exports = router;
