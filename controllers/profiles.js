@@ -28,9 +28,19 @@ function editProfile (req, res) {
     }); 
 };
 
+function updateProfile (req,res) {
+    Profile.findById(req.params.id, function (err, profile) {
+        profile.update(req.body, function (err, profile) {
+            if (err) return res.redirect('/profile');
+        });
+        res.redirect('/profile');
+    });
+};
+
 module.exports = {
     index,
     new: newProfile,
     create: createProfile,
     edit: editProfile,
+    update: updateProfile,
   };
