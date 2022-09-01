@@ -13,9 +13,11 @@ require('./config/passport');
 //remember, for the google oauth to work, $ npm i passport-google-oauth
 
 var indexRouter = require('./routes/index');
-var decksRouter = require('./routes/decks');
-var cardsRouter = require('./routes/cards');
 var divesRouter = require('./routes/dives');
+var profileRouter = require('./routes/profiles');
+
+// var decksRouter = require('./routes/decks');
+// var cardsRouter = require('./routes/cards');
 
 var app = express();
 
@@ -45,9 +47,11 @@ app.use(function(req,res,next) {
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/decks', decksRouter);
-app.use('/', cardsRouter);
 app.use('/dives', divesRouter);
+app.use('/profile', profileRouter);
+
+// app.use('/decks', decksRouter);
+// app.use('/', cardsRouter);
 
 
 // catch 404 and forward to error handler
