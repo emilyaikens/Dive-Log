@@ -2,12 +2,21 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const diveSchema = new Schema ({
-    number: {type: Number},
-    site: {type: String},
+    number: {
+            type: Number,
+            required: true
+            },
+    site: {
+        type: String,
+        required: true
+    },
     buddy: {type: String},
     date: {type: Date},
     time: {type: String},
-    protection: {type: String},
+    protection: {
+            type: String,
+            required: true
+            },
     weight: {type: Number},
     weightUnits: {
         type: String,
