@@ -13,6 +13,7 @@ const profileSchema = new Schema ({
     nickname: {type: String},
     startDate: {type: String},
     certificates: [certificateSchema],
+    favorite: {type: String},
     user: {type: Schema.Types.ObjectId, ref: 'User'},
 }, {
     timestamps: true

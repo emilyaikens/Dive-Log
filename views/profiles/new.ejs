@@ -1,0 +1,18 @@
+<%- include('../partials/header') %>
+
+<h1><%= user.name%></h1>
+
+<form id="new-dive-form" action="/profile" method="POST">
+    <label>Username
+        <input type="String" name="">
+    </label><br>
+    <label>When did you start diving?
+        <input type="String" name="startDate">            
+    </label><br>
+    <label>Favorite dive location?
+        <input type="String" name="favorite">            
+    </label><br>
+
+    <input id="new-profile-button" type="submit" value="Add Info">
+</form>
+
