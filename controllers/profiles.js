@@ -9,7 +9,7 @@ function index(req, res) {
 
 function newProfile (req, res) {
     Profile.findOne({'user': req.user}, function (err, profile) {
-        res.render('profiles/new', {title: 'Edit Profile', profile})
+        res.render('profiles/new', {title: 'New Profile', profile})
     }); 
 };
 
@@ -20,10 +20,17 @@ function createProfile (req, res) {
         if (err) return res.redirect('/profile');
         res.redirect('/profile');
     });
-}
+};
+
+function editProfile (req, res) {
+    Profile.findOne({'user': req.user}, function (err, profile) {
+        res.render('profiles/edit', {title: 'Edit Profile', profile})
+    }); 
+};
 
 module.exports = {
     index,
     new: newProfile,
     create: createProfile,
+    edit: editProfile,
   };
