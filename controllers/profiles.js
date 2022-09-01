@@ -7,6 +7,13 @@ function index(req, res) {
     }); 
 };
 
+function editProfile (req, res) {
+    Profile.findOne({'user': req.user}, function (err, profile) {
+        res.render('profiles/edit', {title: 'Edit Profile', profile})
+    }); 
+};
+
 module.exports = {
     index,
+    edit: editProfile,
   };
