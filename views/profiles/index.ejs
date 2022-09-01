@@ -24,30 +24,26 @@
 
 <% } %>
 
-<% if  ( profile.certifcates ) { %>
+<% if  ( profile.certs.length ) { %>
     
     <div>My Certifications</div>
 
-    <table>
-        <thead>
-            <th>&nbsp</th>
-            <th>Certification</th>
-            <th>Expires</th>
-        </thead>
-        <tbody>
-            <% profile.certificates.forEach(function(c) { %>
-                <% if (user && user._id.equals(c.user)) { %>
-                    <tr>
-                        <td><a class ="dive-details" href="/dives/<%= d._id %>">details</a></td>
-                        <td><%= c.cert%></td>
-                        <td><%= d.expiration%></td>
-                    </tr>
-                  <% }
-                }); %>
-        </tbody>
-    </table>
+    <% profile.certs.forEach(function(c) { %>
+        <table>
+            <thead>
+                <th>Certificate</th>
+                <th>Expiry</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><%= c.cert %></td>
+                    <td><%= c.expiration %></td>
+                </tr>
+            </tbody>
+        </table>
+    <% }); %>
 
     <% } else { %>
         <br>
-        <a href="/profile/certs"><button>Add Certifications</button></a>
+        <a href="/profile/certs"><button>Add / Delete Certifications</button></a>
     <% }; %>

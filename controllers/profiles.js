@@ -58,6 +58,16 @@ function add (req, res) {
     });
 };
 
+function deleteCert (req,res) {
+    Profile.findOne({'certs._id': req.params.id}).then(function (profile) {
+        const cert = profile.certs.id(req.params.id);
+        cert.remove();
+        profile.save(function (err) {
+            res.redirect('/profile/certs')
+        });
+    });
+};
+
 module.exports = {
     index,
     new: newProfile,
@@ -65,5 +75,6 @@ module.exports = {
     edit: editProfile,
     update: updateProfile,
     cert,
-    add
+    add,
+    delete: deleteCert,
   };
