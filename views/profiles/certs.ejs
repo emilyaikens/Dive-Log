@@ -14,8 +14,18 @@
 </form>
 
 <% profile.certs.forEach(function(c) { %>
-    <div><%= c.cert %></div>
-    <div><%= c.expiration %></div>
+    <table>
+        <thead>
+            <th>Certificate</th>
+            <th>Expiry</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td><%= c.cert %></td>
+                <td><%= c.expiration %></td>
+            </tr>
+        </tbody>
+    </table>
 <% }); %>
 
 <a href="/profile"><button>Done</button></a>
