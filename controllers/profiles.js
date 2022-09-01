@@ -13,7 +13,17 @@ function newProfile (req, res) {
     }); 
 };
 
+function createProfile (req, res) {
+    req.body.user = req.user._id;
+    const profile = new Profile(req.body);
+    profile.save(function(err) {
+        if (err) return res.redirect('/profile');
+        res.redirect('/profile');
+    });
+}
+
 module.exports = {
     index,
     new: newProfile,
+    create: createProfile,
   };
