@@ -12,16 +12,17 @@
 
     <h2>my dives</h2>
 
+
     <% dives.forEach(function(d) { %>
         <% if (user && user._id.equals(d.user)) { %>
+            <div class = "flex-container">
             <hr>
             <br>
-            <div class = "flex-container">
                 <div class = "flex-content"><strong>no. <%= d.number%></strong></div>
                 <div class = "flex-content"><%= d.date%></div>
                 <div class = "flex-content"><%= d.site%></div>
                 <div class = "flex-content"><a class ="dive-details" href="/dives/<%= d._id %>">view</a></div>
-            <div>
+            </div>
         <% }
         }); %>
 

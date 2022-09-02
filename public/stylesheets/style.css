@@ -47,6 +47,9 @@ h1 {
   margin: 0 auto;
   font-size: 40px;
 }
+h2 {
+  text-transform: lowercase;
+}
 table {
   border: solid  #344A53;
   border-collapse: collapse;
@@ -58,10 +61,6 @@ th, td {
   padding: 5px 10px 5px 10px;
   text-align: center;
 }
-input, select {
-  padding: 5px;
-  margin: 5px;
- }
  form {
    margin: 5px;
  }
@@ -69,11 +68,11 @@ input, select {
   text-align: right;
 }
 .style-button {
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 12px "Lucida Grande", Helvetica, Arial, sans-serif;
   letter-spacing: 2px;
-  padding: 10px;
+  padding: 8px;
   border-radius: 20px;
-  border: solid #97AFB9;
+  border: solid 2px #97AFB9;
 }
 .style-button:hover {
   background-color: #97AFB9;
@@ -83,13 +82,13 @@ input, select {
   background-color: #F59432;
   border: solid #344A53;
 }
-input {
+input , select {
   border: solid 1px;
   border-radius: 5px;
-}
-select {
-  border: solid 1px;
-  border-radius: 5px;
+  font: 12px "Lucida Grande", Helvetica, Arial, sans-serif;
+  letter-spacing: 2px;
+  padding: 5px;
+  margin: 5px;
 }
 /* new dive form */
 #notes-input{
@@ -129,8 +128,7 @@ hr {
   max-width: 650px;
 }
 .profile-hr {
-  margin: 0 auto;
-  max-width: 500px;
+  max-width: 300px;
 }
 footer {
   background-color: #344A53;

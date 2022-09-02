@@ -1,6 +1,10 @@
 <%- include('../partials/header') %>
 
-<h1>Edit Profile</h1>
+<img class="head-img"src="https://i.imgur.com/aAAPRs0.png">
+
+<h1>edit profile</h1>
+
+<div class="content-body">
 
 <form id="edit-profile-form" action="/profile/<%= profile._id%>/update?_method=PUT" method="POST">
     <label>Username
@@ -11,8 +15,13 @@
     </label><br>
     <label>Favorite dive location?
         <input type="String" name="favorite" value="<%= profile.favorite%>">            
-    </label><br>
+    </label><br><br>
 
-    <input id="edit-profile-button" type="submit" value="Update">
+    <input class = "style-button" type="submit" value="update">
 </form>
 
+</div>
+
+<footer>
+    <%- include('../partials/footer'); %>
+</footer>

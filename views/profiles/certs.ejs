@@ -1,39 +1,43 @@
 <%- include('../partials/header') %>
 
-<h2>Add Certifications</h2>
+<img class="head-img"src="https://i.imgur.com/rdxkPS2.png">
 
-<form id="new-cert-form" action="/profile/add-cert" method="POST">
-    <label>Certification
-        <input type="String" name="cert">
-    </label><br>
-    <label>Expiry
-        <input type="String" name="expiration">            
-    </label><br>
+<h1>Add Certifications</h1>
 
-    <input id="new-cert-button" type="submit" value="Add Cert">
-</form>
+<div class="content-body">
 
-<table>
-    <thead>
-        <th>&nbsp</th>
-        <th>Certificate</th>
-        <th>Expiry</th>
-    </thead>
-    <tbody>
+    <form id="new-cert-form" action="/profile/add-cert" method="POST">
+        <label>Certification
+            <input type="String" name="cert">
+        </label><br>
+        <label>Expiration
+            <input type="String" name="expiration">            
+        </label><br>
+        <input class="style-button" type="submit" value="Add Cert"><br>
+    </form>
+    <hr>
+    <br>
+       
         <% profile.certs.forEach(function(c) { %>
-        <tr>
-            <td class="remove-column">
-                <form action="/profile/cert/<%= c._id%>?_method=DELETE"
-                    class="delete-cert-form" method="POST">
-                    <button type="submit">X</button>
-                </form>
-            </td>
-            <td><%= c.cert %></td>
-            <td><%= c.expiration %></td>
-        </tr>
+            <div class = "flex-container">
+                <div class = "flex-content">
+                    <form action="/profile/cert/<%= c._id%>?_method=DELETE"
+                        class="delete-cert-form" method="POST">
+                        <button type="submit">X</button>
+                    </form>
+                </div>
+                <div class = "flex-content"><%= c.cert %></div>
+                <div class = "flex-content"><%= c.expiration %></div>
+            </div>
         <% }); %>
-    </tbody>
-</table> <br>
 
+    <br>
+    <hr>
+    <br>
+    <a href="/profile"><button class="style-button">Done</button></a>
 
-<a href="/profile"><button>Done</button></a>
+</div>
+
+<footer>
+    <%- include('../partials/footer'); %>
+</footer>
