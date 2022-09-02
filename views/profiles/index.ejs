@@ -5,7 +5,7 @@
 <h1>my profile</h1>
 
 <div class="content-body">
-    
+    <!-- if a profile exists for this user, show their info and certs     -->
     <% if (profile) { %>
 
         <h2><%= user.name%></h2><br>
@@ -37,12 +37,12 @@
             <a href="/profile/certs"><button class = "style-button">add/edit certs</button></a>    
             </div>    
             
-    
+    <!-- if user has no certs yet -->
         <% } else { %>
             <br>
             <a href="/profile/certs"><button class = "style-button">add certs</button></a>
         <% }; %>
-
+    <!-- if user has no profile yet -->
     <% } else { %>  
 
         <a href="/profile/new"><button class = "style-button">create profile</button></a>
