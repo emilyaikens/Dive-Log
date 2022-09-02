@@ -120,6 +120,17 @@ th, td {
   background-color: #F59432;
   border: solid #344A53;
 }
+#delete-cert {
+  font: 12px "Lucida Grande", Helvetica, Arial, sans-serif;
+  color: black;
+  border-radius: 5px;
+  border: solid 2px #344A53;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+#delete-cert:hover {
+  background-color: #F59432;
+}
 /* profile page */
 #profile-index {
   text-align: center;
@@ -137,6 +148,7 @@ th, td {
 /* form and log formatting  */
 .flex-container {
   display: flex;
+  align-items: center;
 }
 .flex-content {
   margin-right: 40px;

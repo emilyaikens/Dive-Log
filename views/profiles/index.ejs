@@ -32,11 +32,16 @@
             <% profile.certs.forEach(function(c) { %>
                 <br>
                 <div class = "flex-container" id="flex-profile"></div>
+                <%if (c.exiration) { %>
                     <div><%= c.cert %> - Expires: <%= c.expiration %></div>
                     <br>
+                <% } else { %>
+                    <div><%= c.cert %></div>
+                    <br>
+                <% }; %>    
             <% }); %>
             <br>
-        <a href="/profile/certs"><button class = "style-button">edit certs</button></a>    
+        <a href="/profile/certs"><button class = "style-button">add/edit certs</button></a>    
         </div>    
         
 

@@ -12,7 +12,7 @@
         </label><br>
         <label>Expiration
             <input type="String" name="expiration">            
-        </label><br>
+        </label><br><br>
         <input class="style-button" type="submit" value="Add Cert"><br>
     </form>
     <hr>
@@ -21,9 +21,8 @@
         <% profile.certs.forEach(function(c) { %>
             <div class = "flex-container">
                 <div class = "flex-content">
-                    <form action="/profile/cert/<%= c._id%>?_method=DELETE"
-                        class="delete-cert-form" method="POST">
-                        <button type="submit">X</button>
+                    <form action="/profile/cert/<%= c._id%>?_method=DELETE" method="POST">
+                        <button id="delete-cert" type="submit">X</button>
                     </form>
                 </div>
                 <div class = "flex-content"><%= c.cert %></div>
