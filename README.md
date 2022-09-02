@@ -1,10 +1,15 @@
 # Project 2: Dive Log
 
 ## Description:
-text
+A Node/Express/MongoDB, full-stack app designed for divers to log and access their dives online. 
 
 ## Technical Requirements
-1. text
+1. Have at least two data entities (data resources) in addition to the User Model
+2. Use OAUth authentication
+3. Implement basic authorization that restricts access to features that need a logged in user in order to work
+4. Have a full-CRUD data operations somewhere within the app's features.
+5. Have a consistent and polished user interface
+6. Be deployed online (Heroku)
 
 ## Technologies Used: 
 * HTML
@@ -36,9 +41,13 @@ text
 * text
 * text
 
-![Flow chart](image link)
+CRUD Flow Chart
+![CRUD Flow Chart](https://i.imgur.com/ZHvfQMd.png)
 
-## Other sources: 
+ERD
+![ERD](https://i.imgur.com/T7kCMwF.png)
+
+## Planning Sources: 
 
 * [Planning/Pseudocode: Google Doc](https://docs.google.com/document/d/1AZvyxvdnltxkjQmsthisayq21--fnwLX5ruJO0g98dk/edit?usp=sharing)
 
