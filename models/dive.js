@@ -4,12 +4,17 @@ const Schema = mongoose.Schema;
 const diveSchema = new Schema ({
     number: {
             type: Number,
+            required: true
             },
     site: {
         type: String,
+        required: true
     },
     buddy: {type: String},
-    date: {type: Date},
+    date: {
+            type: String,
+            required: true
+        },
     time: {type: String},
     protection: {
             type: String,

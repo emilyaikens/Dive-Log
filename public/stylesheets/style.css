@@ -159,7 +159,7 @@ th, td {
 .sm {
   width: 60px;
 }
-input , select {
+input , select, textarea {
   border: solid 1px;
   border-radius: 5px;
   font: 12px "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -167,8 +167,11 @@ input , select {
   padding: 5px;
   margin: 5px;
 }
-#notes-input{
-  width: 50%;
+.date-input {
+  color:#F59432;
+}
+#note-container {
+  max-width: 600px;
 }
 /* divider lines */
 hr {

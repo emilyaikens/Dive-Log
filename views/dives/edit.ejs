@@ -9,17 +9,17 @@
 <!-- form to edit dive -->
     <form class = "edit-dive-form" action="/dives/<%= dive._id %>/update?_method=PUT" 
         method ="POST" autocomplete="off">
-        <label>Dive Number
+        <label>Dive Number*
             <input class = "sm" type="Number" name="number" value="<%= dive.number%>">
         </label>
-        <label>Dive Site
+        <label>Dive Site*
             <input type="String" name="site" value="<%= dive.site%>">            
         </label><br>
         <label>Dive Buddy
             <input type="String" name="buddy" value="<%= dive.buddy%>">            
         </label><br>    
-        <label>Date
-            <input type="Date" name="date" value="<%= dive.date%>">
+        <label>Date* 
+            <input type="String" name="date" value="<%=dive.date%>">
         </label>
         <label>Time
             <input class = "sm" type="String" name="time" value="<%= dive.time%>">
@@ -89,7 +89,7 @@
     <hr>    
         </label><br>    
         <div>Notes</div>
-            <textarea type="String" name="notes" rows="5" cols="50" value="<%= dive.notes%>"></textarea>
+            <textarea type="String" name="notes" rows="5" cols="50"><%= dive.notes%></textarea>
             <br>
     <br>    
         <input class="style-button" type="submit" value="update">
