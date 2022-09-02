@@ -11,27 +11,30 @@ A Node/Express/MongoDB, full-stack app designed for divers to log and access the
 5. Have a consistent and polished user interface
 6. Be deployed online (Heroku)
 
-## Technologies Used: 
+## Technologies Used
 * HTML
+* EJS
 * CSS
 * JavaScript
 * Node
+* Express
 * MongoDB
 * Mongoose
 * GitHub Branching
 
-## Getting Started: 
+## Getting Started
 
-* [Link to site]("")
+* [Link to app]("https://enigmatic-basin-31771.herokuapp.com/")
 
-* Instructions: text
+* Instructions: login with a google account to get started
 
-## Next steps: 
+## IceBox
 
-* [Expansion!]("") Text
-* Text
+* It would be great to add some more fields to the dive log. Was it in fresh water or salt water? Altitude? Etc.
+* Create another schema to hold dive buddies would allow user to select a buddy from a dropdown menu. This would save some typing time if the user is always diving with the same few people. The same would be true for dive sites.
+* Using a third-party-API, allow users to connect with one-another and have the option to view each others dive logs. 
 
-## App Screenshots:
+## App Screenshots
 
 ![Login Page](https://i.imgur.com/ucRq5lI.png)
 
@@ -40,16 +43,23 @@ A Node/Express/MongoDB, full-stack app designed for divers to log and access the
 ![Add Certifications](https://i.imgur.com/sCxoIbM.png)
 
 ## Project Hurdles
-* text
-* text
+* The largest hurdle I had, by far, was having to start my project over two days before it was due. My first plan was to create a flashcard app, but after creating all of the CRUD functionality I was left with the question of how to implement the "previous card", "next card", and "flip card" functions. While it was possible to create routes for this functionality to work, I quickly realized that the combination of technologies required for this project were not the most efficient tools for a flash-card app. It would be like squashing a square peg into a round hole. This project was designed to give us a thorough understanding of the required technologies - not just _how_ to use them, but also _when_ to use them. I chose to honor the purpose of the project by choosing a new app that would be better suited to the technology - thus, the dive log app was born. Despite doubling my work load, I am glad of my choice because I now feel extremeley confident in my ability to the involved technologies. 
+
+## Planning Charts
 
 CRUD Flow Chart
+
 ![CRUD Flow Chart](https://i.imgur.com/ZHvfQMd.png)
 
 ERD
+
 ![ERD](https://i.imgur.com/T7kCMwF.png)
 
-## Planning Sources: 
+Page Layout
+
+![Page Layout](https://i.imgur.com/KQktnwj.png)
+
+## Planning Links
 
 * [Planning/Pseudocode: Google Doc](https://docs.google.com/document/d/1AZvyxvdnltxkjQmsthisayq21--fnwLX5ruJO0g98dk/edit?usp=sharing)
 
@@ -61,3 +71,7 @@ ERD
 
 * [ERD: Lucidchart](https://lucid.app/lucidchart/c21ddceb-c136-4b10-885b-a41790babade/edit?page=0_0&invitationId=inv_95a520de-bfd8-4610-a430-0cdf9dd83f26#)
 
+### Image Credit
+
+Andrew McCurdy: "My Dives", "Login Page", "My Profile"
+Emily Aikens: Everything else
