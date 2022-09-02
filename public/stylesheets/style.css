@@ -79,6 +79,18 @@ input, select {
   background-color: #97AFB9;
   color: white;
 }
+#delete-button {
+  background-color: #F59432;
+  border: solid #344A53;
+}
+input {
+  border: solid 1px;
+  border-radius: 5px;
+}
+select {
+  border: solid 1px;
+  border-radius: 5px;
+}
 /* new dive form */
 #notes-input{
   height: 100px;;
@@ -86,6 +98,10 @@ input, select {
 }
 .sm {
   width: 50px;
+}
+/* profile page */
+#profile-index {
+  text-align: center;
 }
 /* header images */
 .head-img {
@@ -110,7 +126,11 @@ hr {
   margin-top: 15px;
   margin-bottom: 0px;
   margin-left: 0px;
-  max-width: 700px;
+  max-width: 650px;
+}
+.profile-hr {
+  margin: 0 auto;
+  max-width: 500px;
 }
 footer {
   background-color: #344A53;

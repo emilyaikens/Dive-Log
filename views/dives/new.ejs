@@ -1,32 +1,32 @@
 <%- include('../partials/header') %>
 
-    <img class="head-img"src="https://i.imgur.com/lzLCD2s.png">
+<img class="head-img"src="https://i.imgur.com/lzLCD2s.png">
 
-    <h1>new dive</h1>
+<h1>new dive</h1>
 
 <div class = "content-body">
 
     <form id="new-dive-form" action="/dives" method="POST">
-        <label>Dive Number
-            <input type="Number" name="number">
-        </label><br>
-        <label>Dive Site
+        <label>dive no.
+            <input class = "sm" type="Number" name="number">
+        </label>
+        <label>site
             <input type="String" name="site">            
-        </label><br>
-        <label>Dive Buddy
-            <input type="String" name="buddy">            
-        </label><br>    
-        <label>Date
+        </label><br>   
+        <label>date
             <input type="Date" name="date" value="date">
-        </label><br>
-        <label>Time
+        </label>
+        <label>time
             <input type="String" name="time">
+        </label><br> 
+            <label>buddy
+                <input type="String" name="buddy">            
     <hr>
         </label><br>
-        <label>Exposure Protection
+        <label>exposure protection
             <input type="String" name="protection">
         </label><br>
-        <label>Weight
+        <label>weight
             <input class="sm" type="Number" name="weight">
         </label>
         <label>
@@ -35,23 +35,23 @@
                 <option value="ib" selected>ib</option>
             </select>
         </label><br>
-        <label>Entry
+        <label>entry method
             <select name="entry">
                 <option value="shore">shore</option>
                 <option value="boat" selected>boat</option>
                 <option value="other" selected>other</option>
             </select>
         </label><br>
-        <label>Conditions
+        <label>conditions
             <input type="String" name="conditions">
         </label><br>  
-        <label>Air Temp
+        <label>air temp
             <input class="sm" type="Number" name="airTemp">
         </label>
-        <label>Surface Temp
+        <label>surface temp
             <input class="sm" type="Number" name="surfaceTemp">
         </label>
-        <label>Water Temp
+        <label>water temp
             <input class="sm" type="Number" name="waterTemp">
         </label> 
         <label>
@@ -61,10 +61,10 @@
             </select>
     <hr>    
         </label><br>
-        <label>Starting Air Pressure
+        <label>start air pressure
             <input class="sm" type="Number" name="startAir">
         </label>
-        <label>Ending Air Pressure
+        <label>end air pressure
             <input class="sm" type="Number" name="endAir">
         </label>
         <label>
@@ -73,7 +73,7 @@
                 <option value="bar">bar</option>
             </select>
         </label><br>  
-        <label>Max Depth
+        <label>max depth
             <input class="sm" type="Number" name="maxDepth">
         </label> 
         <label>
@@ -82,20 +82,20 @@
                 <option value="m">m</option>
             </select>
         </label><br>  
-        <label>Bottom Time
+        <label>bottom time
             <input type="String" name="bottomTime">
     <hr>    
         </label><br>    
-        <label>Notes<br>
+        <label>notes<br>
             <input id="notes-input" type="String" name="notes">
         </label><br>
         <br>
-        <input class="style-button" type="submit" value="Add Dive">
+        <input class="style-button" type="submit" value="add dive">
         <div class="bottom-space">&nbsp</div>
     </form>
 
 </div>
 
-    <footer>
-        <%- include('../partials/footer'); %>
-    </footer>
+<footer>
+    <%- include('../partials/footer'); %>
+</footer>

@@ -1,50 +1,52 @@
+<%- include('../partials/header') %>
 
-<h1><%= user.name%></h1>
+<img class="head-img"src="https://i.imgur.com/azLDf2u.png">
 
-<% if (profile) { %>
+<h1>my profile</h1>
+
+<div class="content-body" id="profile-index">
     
-    <img src="<%= user.avatar %>">
+    <% if (profile) { %>
 
-    <div>Username:</div>
-    <div><%= profile.nickname%></div>    
+        <h2><%= user.name%></h2><br>
 
-    <div>Started Diving:</div>
-    <div><%= profile.startDate%></div>
+        <div>aka: <%= profile.nickname%></div>    
+        <br>
+        <div>I've been diving since <%= profile.startDate%></div>
+        <br>
+        <div>My favorite dive site is <%= profile.favorite%></div>    
+        <br>
+        <a href="/profile/edit"><button class = "style-button">edit</button></a>
 
-    <div>Favorite dive site:</div>
-    <div><%= profile.favorite%></div>    
+    <% } else { %>  
 
-    <br>
-    <a href="/profile/edit"><button>Edit Profile</button></a>
+        <a href="/profile/new"><button class = "style-button">add info</button></a>
 
-<% } else { %>  
+    <% } %>
+    <div>&nbsp</div>
 
-    <a href="/profile/new"><button>Add Information</button></a>
+    <% if  ( profile.certs.length ) { %>
+        <hr class="profile-hr">
+        <h2>Certifications</h2>
+        <br>
+            <% profile.certs.forEach(function(c) { %>
+                <br>
+                <div class = "flex-container" id="flex-profile"></div>
+                    <div><%= c.cert %> - Expires: <%= c.expiration %></div>
+                    <br>
+            <% }); %>
+            <br>
+        <a href="/profile/certs"><button class = "style-button">edit certs</button></a>    
+        </div>    
+        
 
-<% } %>
-
-<% if  ( profile.certs.length ) { %>
+    <% } else { %>
+        <br>
+        <a href="/profile/certs"><button class = "style-button">add certs</button></a>
+    <% }; %>
     
-    <div>My Certifications</div>
+</div>
 
-    <table>
-        <thead>
-            <th>Certificate</th>
-            <th>Expiry</th>
-        </thead>
-            <tbody>
-                <% profile.certs.forEach(function(c) { %>
-                <tr>
-                    <td><%= c.cert %></td>
-                    <td><%= c.expiration %></td>
-                </tr>
-                <% }); %>
-            </tbody>
-    </table>
-
-    <a href="/profile/certs"><button>Add / Delete Certifications</button></a>
-
-<% } else { %>
-    <br>
-    <a href="/profile/certs"><button>Add</button></a>
-<% }; %>
+<footer>
+    <%- include('../partials/footer'); %>
+</footer>

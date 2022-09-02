@@ -1,97 +1,111 @@
 <%- include('../partials/header') %>
 
-<h1>Edit Dive Number <%= dive.number%></h1>
+<img class="head-img"src="https://i.imgur.com/rqwgYpL.png">
+
+<h1>edit dive no. <%= dive.number%></h1>
+
+<div class="content-body">
 
 <!-- form to edit dive -->
-<form class = "edit-dive-form" action="/dives/<%= dive._id %>/update?_method=PUT" 
-    method ="POST" autocomplete="off">
-    <label>Dive Number
-        <input type="Number" name="number" value="<%= dive.number%>">
-    </label><br>
-    <label>Dive Site
-        <input type="String" name="site" value="<%= dive.site%>">            
-    </label><br>
-    <label>Dive Buddy
-        <input type="String" name="buddy" value="<%= dive.buddy%>">            
-    </label><br>    
-    <label>Date
-        <input type="Date" name="date" value="<%= dive.date%>">
-    </label><br>
-    <label>Time
-        <input type="String" name="time" value="<%= dive.time%>">
-    </label><br>
-    <label>Exposure Protection
-        <input type="String" name="protection" value="<%= dive.protection%>">
-    </label><br>
-    <label>Weight
-        <input type="Number" name="weight" value="<%= dive.weight%>">
-    </label><br>  
-    <label>
-        <select name="weightUnits" value="<%= dive.weightUnits%>">
-            <option value="kg">kg</option>
-            <option value="ib">ib</option>
-        </select>
-    </label><br>
-    <label>Entry
-        <select name="entry" value="<%= dive.entry%>">
-            <option value="shore">shore</option>
-            <option value="boat">boat</option>
-            <option value="other">other</option>
-        </select>
-    </label><br>
-    <label>Conditions
-        <input type="String" name="conditions" value="<%= dive.conditions%>">
-    </label><br>  
-    <label>Air Temp
-        <input type="Number" name="airTemp" value="<%= dive.airTemp%>">
-    </label><br> 
-    <label>Surface Temp
-        <input type="Number" name="surfaceTemp" value="<%= dive.surfaceTemp%>">
-    </label><br> 
-    <label>Water Temp
-        <input type="Number" name="waterTemp" value="<%= dive.waterTemp%>">
-    </label><br>   
-    <label>
-        <select name="tempUnits" value="<%= dive.tempUnits%>">
-            <option value="C">C</option>
-            <option value="F">F</option>
-        </select>
-    </label><br>
-    <label>Starting Air Pressure
-        <input type="Number" name="startAir" value="<%= dive.startAir%>">
-    </label><br>
-    <label>Ending Air Pressure
-        <input type="Number" name="endAir" value="<%= dive.endAir%>">
-    </label><br> 
-    <label>
-        <select name="airUnits" value="<%= dive.airUnits%>">
-            <option value="psi">psi</option>
-            <option value="bar">bar</option>
-        </select>
-    </label><br>  
-    <label>Max Depth
-        <input type="Number" name="maxDepth" value="<%= dive.maxDepth%>">
-    </label><br>      
-    <label>
-        <select name="depthUnits" value="<%= dive.depthUnits%>">
-            <option value="ft">ft</option>
-            <option value="m">m</option>
-        </select>
-    </label><br>  
-    <label>Bottom Time
-        <input type="String" name="bottomTime" value="<%= dive.bottomTime%>">
-    </label><br>    
-    <label>Notes
-        <input type="String" name="notes" value="<%= dive.notes%>">
-    </label><br>
+    <form class = "edit-dive-form" action="/dives/<%= dive._id %>/update?_method=PUT" 
+        method ="POST" autocomplete="off">
+        <label>Dive Number
+            <input class = "sm" type="Number" name="number" value="<%= dive.number%>">
+        </label>
+        <label>Dive Site
+            <input type="String" name="site" value="<%= dive.site%>">            
+        </label><br>
+        <label>Dive Buddy
+            <input type="String" name="buddy" value="<%= dive.buddy%>">            
+        </label><br>    
+        <label>Date
+            <input type="Date" name="date" value="<%= dive.date%>">
+        </label>
+        <label>Time
+            <input class = "sm" type="String" name="time" value="<%= dive.time%>">
+    <hr>
+        </label><br>
+        <label>Exposure Protection
+            <input type="String" name="protection" value="<%= dive.protection%>">
+        </label><br>
+        <label>Weight
+            <input class = "sm" type="Number" name="weight" value="<%= dive.weight%>">
+        </label> 
+        <label>
+            <select name="weightUnits" value="<%= dive.weightUnits%>">
+                <option value="kg">kg</option>
+                <option value="ib">ib</option>
+            </select>
+        </label><br>
+        <label>Entry
+            <select name="entry" value="<%= dive.entry%>">
+                <option value="shore">shore</option>
+                <option value="boat">boat</option>
+                <option value="other">other</option>
+            </select>
+        </label><br>
+        <label>Conditions
+            <input type="String" name="conditions" value="<%= dive.conditions%>">
+        </label><br>  
+        <label>Air Temp
+            <input class = "sm" type="Number" name="airTemp" value="<%= dive.airTemp%>">
+        </label>
+        <label>Surface Temp
+            <input class = "sm" type="Number" name="surfaceTemp" value="<%= dive.surfaceTemp%>">
+        </label> 
+        <label>Water Temp
+            <input class = "sm" type="Number" name="waterTemp" value="<%= dive.waterTemp%>">
+        </label>
+        <label>
+            <select name="tempUnits" value="<%= dive.tempUnits%>">
+                <option value="C">C</option>
+                <option value="F">F</option>
+            </select>
+    <hr>
+        </label><br>
+        <label>Starting Air Pressure
+            <input class = "sm" type="Number" name="startAir" value="<%= dive.startAir%>">
+        </label>
+        <label>Ending Air Pressure
+            <input class = "sm" type="Number" name="endAir" value="<%= dive.endAir%>">
+        </label>
+        <label>
+            <select name="airUnits" value="<%= dive.airUnits%>">
+                <option value="psi">psi</option>
+                <option value="bar">bar</option>
+            </select>
+        </label><br>  
+        <label>Max Depth
+            <input class = "sm" type="Number" name="maxDepth" value="<%= dive.maxDepth%>">
+        </label>    
+        <label>
+            <select name="depthUnits" value="<%= dive.depthUnits%>">
+                <option value="ft">ft</option>
+                <option value="m">m</option>
+            </select>
+        </label><br>  
+        <label>Bottom Time
+            <input type="String" name="bottomTime" value="<%= dive.bottomTime%>">
+    <hr>    
+        </label><br>    
+        <label>Notes
+            <input type="String" name="notes" value="<%= dive.notes%>">
+        </label><br>
+    <br>    
+        <input class="style-button" type="submit" value="update">
+    </form>
+    <hr>
+    <br>
+    <div>DANGER ZONE</div><br>
 
-    <input id="new-dive-button" type="submit" value="Update">
-</form>
+    <!-- delete dive         -->
+    <form action="/dives/<%= dive._id %>/delete?_method=DELETE"
+        class="delete-card" method="POST">
+        <button id= "delete-button" class = "style-button" type="submit"><strong>delete dive</strong></button>
+    </form>
 
-<div>Danger Zone</div>
+</div>
 
-<!-- delete dive         -->
-<form action="/dives/<%= dive._id %>/delete?_method=DELETE"
-    class="delete-card" method="POST">
-    <button type="submit">delete dive</button>
-</form>
+<footer>
+    <%- include('../partials/footer'); %>
+</footer>
