@@ -15,7 +15,7 @@ function newDive (req, res) {
 //called from new dive form
 function create (req, res) {
     req.body.user = req.user._id; //assigns form user to current user   
-    const dive = new Dive(req.body); 
+    const dive = new Dive(req.body);
     dive.save(function(err) { // save the form information to a new dive schema
         if (err) return res.redirect('/dives');
         res.redirect('/dives'); //redirect to my dives

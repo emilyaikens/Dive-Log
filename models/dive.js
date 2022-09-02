@@ -42,7 +42,7 @@ const diveSchema = new Schema ({
         type: String,
         enum: ['ft', 'm']
         },
-    bottomTime: {type: Number},
+    bottomTime: {type: String},
     notes: {type: String},
     user: {type: Schema.Types.ObjectId, ref: 'User'},
 }, {
