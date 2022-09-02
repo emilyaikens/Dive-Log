@@ -31,9 +31,10 @@ A full-stack app designed for divers to log, save, and access their dives online
 
 ## IceBox
 
+* Style for a responsive design
 * Add more fields to the dive log
 * Create another schema to hold dive buddies. This would allow user to select a buddy from a dropdown menu which would save some typing time if the user is always diving with the same few people. The same would be true for dive sites.
-* Using a third-party-API, allow users to connect with one-another and have the option to view each others dive logs. 
+* Use a third-party-API, allow users to connect with one-another and have the option to view each others dive logs. 
 
 ## App Screenshots
 
