@@ -66,7 +66,7 @@ a {
   margin-top: 80px;
 }
 #login-button:hover {
-  border-radius: 20px;
+  border-radius: 10px;
   font-weight: bold;
 }
 #login-p {
@@ -104,6 +104,7 @@ th, td {
  #add-new-dive {
   text-align: right;
 }
+/* buttons */
 .style-button {
   font: 12px "Lucida Grande", Helvetica, Arial, sans-serif;
   letter-spacing: 2px;
@@ -119,22 +120,6 @@ th, td {
   background-color: #F59432;
   border: solid #344A53;
 }
-input , select {
-  border: solid 1px;
-  border-radius: 5px;
-  font: 12px "Lucida Grande", Helvetica, Arial, sans-serif;
-  letter-spacing: 2px;
-  padding: 5px;
-  margin: 5px;
-}
-/* new dive form */
-#notes-input{
-  height: 100px;;
-  width: 50%;
-}
-.sm {
-  width: 50px;
-}
 /* profile page */
 #profile-index {
   text-align: center;
@@ -149,6 +134,7 @@ input , select {
   min-height: 300px;
   object-fit: cover;
 }
+/* form and log formatting  */
 .flex-container {
   display: flex;
 }
@@ -158,15 +144,32 @@ input , select {
 .bottom-space {
   margin: 50px;
 }
+.sm {
+  width: 60px;
+}
+input , select {
+  border: solid 1px;
+  border-radius: 5px;
+  font: 12px "Lucida Grande", Helvetica, Arial, sans-serif;
+  letter-spacing: 2px;
+  padding: 5px;
+  margin: 5px;
+}
+#notes-input{
+  width: 50%;
+}
+/* divider lines */
 hr {
   margin-top: 15px;
   margin-bottom: 0px;
   margin-left: 0px;
-  max-width: 450px;
+  max-width: 650px;
 }
 .profile-hr {
   max-width: 300px;
 }
+/* . */
+
 footer {
   background-color: #344A53;
   position: fixed;

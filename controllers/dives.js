@@ -25,7 +25,7 @@ function create (req, res) {
 //called from the my dives page, the "details"links
 function show (req, res) {
     Dive.findById(req.params.id, function (err, dive) {
-        res.render('dives/show', {title: `${dive.number}`, dive }) //render the show view
+        res.render('dives/show', {title: `dive no ${dive.number}`, dive }) //render the show view
     });
 };
 
