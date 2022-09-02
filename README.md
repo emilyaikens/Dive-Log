@@ -21,6 +21,7 @@ A full-stack app designed for divers to log, save, and access their dives online
 * MongoDB
 * Mongoose
 * GitHub Branching
+* Oauth
 
 ## Getting Started
 
