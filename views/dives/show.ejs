@@ -12,12 +12,13 @@
     <!-- dive log details -->
 
     <div><strong>Dive Site:</strong> <%= dive.site%></div>
-    <br><br>
+    <br>
+    <div><strong>Dive Buddy:</strong> <%= dive.buddy%></div>
+    <br>
     <div><strong>Date:</strong> <%= dive.date%></div>
     <br>
     <div><strong>Time:</strong> <%= dive.time%></div>
-    <br>
-    <div><strong>Dive Buddy:</strong> <%= dive.buddy%></div>
+<hr>
     <br>
     <div><strong>Exposure Protection:</strong> <%= dive.protection%></div>
     <br>
@@ -34,6 +35,7 @@
         <br>
         <div class="flex-content"><strong>Water Temp:</strong> <%= dive.waterTemp%> <%= dive.tempUnits%></div>
     </div>
+<hr>
     <br>
     <div class="flex-container">
         <div class="flex-content"><strong>Starting Air Pressure:</strong> <%= dive.startAir%> <%= dive.airUnits%></div>
@@ -44,6 +46,7 @@
     <div><strong>Maximum Depth:</strong> <%= dive.maxDepth%> <%= dive.depthUnits%></div>
     <br>
     <div><strong>Bottom Time:</strong> <%= dive.bottomTime%></div>
+<hr>    
     <br>
     <div><strong>Notes:</strong></div>
     <div><%= dive.notes%></div>
