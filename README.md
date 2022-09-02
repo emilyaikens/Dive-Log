@@ -1,7 +1,7 @@
 # Project 2: Dive Log
 
 ## Description:
-A Node/Express/MongoDB, full-stack app designed for divers to log and access their dives online. 
+A full-stack app designed for divers to log, save, and access their dives online. 
 
 ## Technical Requirements
 1. Have at least two data entities (data resources) in addition to the User Model
@@ -24,26 +24,34 @@ A Node/Express/MongoDB, full-stack app designed for divers to log and access the
 
 ## Getting Started
 
-* [Link to app]("https://enigmatic-basin-31771.herokuapp.com/")
+* [Link to app](https://enigmatic-basin-31771.herokuapp.com/)
 
 * Instructions: login with a google account to get started
 
 ## IceBox
 
-* It would be great to add some more fields to the dive log. Was it in fresh water or salt water? Altitude? Etc.
-* Create another schema to hold dive buddies would allow user to select a buddy from a dropdown menu. This would save some typing time if the user is always diving with the same few people. The same would be true for dive sites.
+* Add more fields to the dive log
+* Create another schema to hold dive buddies. This would allow user to select a buddy from a dropdown menu which would save some typing time if the user is always diving with the same few people. The same would be true for dive sites.
 * Using a third-party-API, allow users to connect with one-another and have the option to view each others dive logs. 
 
 ## App Screenshots
 
+Login page
+
 ![Login Page](https://i.imgur.com/ucRq5lI.png)
 
+New Dive page
+
 ![New Dive](https://i.imgur.com/IESpgxl.png)
+
+Add Certifications page
 
 ![Add Certifications](https://i.imgur.com/sCxoIbM.png)
 
 ## Project Hurdles
-* The largest hurdle I had, by far, was having to start my project over two days before it was due. My first plan was to create a flashcard app, but after creating all of the CRUD functionality I was left with the question of how to implement the "previous card", "next card", and "flip card" functions. While it was possible to create routes for this functionality to work, I quickly realized that the combination of technologies required for this project were not the most efficient tools for a flash-card app. It would be like squashing a square peg into a round hole. This project was designed to give us a thorough understanding of the required technologies - not just _how_ to use them, but also _when_ to use them. I chose to honor the purpose of the project by choosing a new app that would be better suited to the technology - thus, the dive log app was born. Despite doubling my work load, I am glad of my choice because I now feel extremeley confident in my ability to the involved technologies. 
+* The largest hurdle I had, by far, was having to start my project over two days before it was due. My first plan was to create a flashcard app, but after creating all of the CRUD functionality I was left with the question of how to implement the "previous card", "next card", and "flip card" functions. While it was possible to create routes for this functionality to work, I quickly realized that the combination of technologies required for this project were not the most efficient tools for a flash-card app. This project was designed to give us a thorough understanding of the required technologies - not just _how_ to use them, but also _when_ to use them. I chose to honor the purpose of the project by starting a new app that would be better suited to the technology - thus, the dive log app was born. Despite doubling my work load, I am glad of my choice because I now feel extremeley confident in my ability to work with the involved technologies. 
+
+* A hurdle I faced during my flash-cards edition of this project was understanding data flow. I am a visual learner so, predictably, the thing that helped me the most was drawing it out. With the help of a whiteboard and a rainbow of markers, I broke down the components of a URL and mapped out every pathway. Finally, I could see how the server, routes, views, models, and controllers all fit together. Once I figured out where the pieces interacted, I was able to create pathways quickly and the process actually became quite fun. 
 
 ## Planning Charts
 
