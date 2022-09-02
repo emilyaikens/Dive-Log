@@ -109,7 +109,7 @@ th, td {
   font: 12px "Lucida Grande", Helvetica, Arial, sans-serif;
   letter-spacing: 2px;
   padding: 8px;
-  border-radius: 20px;
+  border-radius: 15px;
   border: solid 2px #97AFB9;
 }
 .style-button:hover {
@@ -159,6 +159,9 @@ th, td {
 .sm {
   width: 60px;
 }
+form {
+  margin-left: 0px;
+}
 input , select, textarea {
   border: solid 1px;
   border-radius: 5px;
@@ -166,6 +169,7 @@ input , select, textarea {
   letter-spacing: 2px;
   padding: 5px;
   margin: 5px;
+  margin-left: 0px;
 }
 .date-input {
   color:#F59432;

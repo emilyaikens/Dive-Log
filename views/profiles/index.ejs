@@ -18,37 +18,39 @@
         <br>
         <a href="/profile/edit"><button class = "style-button">edit</button></a>
 
+        <% if  ( profile.certs.length ) { %>
+            <hr class="profile-hr">
+            <h2>Certifications</h2>
+            <br>
+                <% profile.certs.forEach(function(c) { %>
+                    <br>
+                    <div class = "flex-container" id="flex-profile"></div>
+                    <%if (c.expiration.length) { %>
+                        <div><%= c.cert %> - Expires: <%= c.expiration %></div>
+                        <br>
+                    <% } else { %>
+                        <div><%= c.cert %></div>
+                        <br>
+                    <% }; %>    
+                <% }); %>
+                <br>
+            <a href="/profile/certs"><button class = "style-button">add/edit certs</button></a>    
+            </div>    
+            
+    
+        <% } else { %>
+            <br>
+            <a href="/profile/certs"><button class = "style-button">add certs</button></a>
+        <% }; %>
+
     <% } else { %>  
 
-        <a href="/profile/new"><button class = "style-button">add info</button></a>
+        <a href="/profile/new"><button class = "style-button">create profile</button></a>
 
     <% } %>
     <div>&nbsp</div>
 
-    <% if  ( profile.certs.length ) { %>
-        <hr class="profile-hr">
-        <h2>Certifications</h2>
-        <br>
-            <% profile.certs.forEach(function(c) { %>
-                <br>
-                <div class = "flex-container" id="flex-profile"></div>
-                <%if (c.expiration.length) { %>
-                    <div><%= c.cert %> - Expires: <%= c.expiration %></div>
-                    <br>
-                <% } else { %>
-                    <div><%= c.cert %></div>
-                    <br>
-                <% }; %>    
-            <% }); %>
-            <br>
-        <a href="/profile/certs"><button class = "style-button">add/edit certs</button></a>    
-        </div>    
-        
 
-    <% } else { %>
-        <br>
-        <a href="/profile/certs"><button class = "style-button">add certs</button></a>
-    <% }; %>
     
 </div>
 

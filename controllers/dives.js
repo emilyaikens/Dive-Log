@@ -2,15 +2,16 @@ const Dive = require('../models/dive');
 
 //called from login, or from header link "my dives"
 function index(req, res) {
-    Dive.find({}, function(err, dives) { //find all dive schemas    
-        res.render('dives/index', { title: 'My Dives', dives }) //render dives to dives/index view
-    });
+    Dive.find({'user': req.user}, function (err, dives) {
+        res.render('dives/index', {title: 'My Dives', dives})
+    }); 
 };
 
 //called from the new header link or link in views/dives/show
 function newDive (req, res) {
     res.render('dives/new', {title: "New Dive"}); //render new dives view
 };
+
 
 //called from new dive form
 function create (req, res) {
