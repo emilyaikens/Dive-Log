@@ -4,11 +4,16 @@
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
-  <body>
-    <%- include('partials/header') %>
-    <h1><%= title %></h1>
+  
+  <body id="login-body">
+
+    <div id="login-title"><%= title %></div>
+
+    <div id="login-p">an online platform to log your dives</div>
+
     <form action = "/auth/google" class="login">
-      <input type="submit" value="Login">
+      <input id="login-button" type="submit" value="Login">
     </form>
+
   </body>
 </html>

@@ -33,9 +33,11 @@ A Node/Express/MongoDB, full-stack app designed for divers to log and access the
 
 ## App Screenshots:
 
-![description](image link)
+![Login Page](https://i.imgur.com/ucRq5lI.png)
 
-![description](image link)
+![New Dive](https://i.imgur.com/IESpgxl.png)
+
+![Add Certifications](https://i.imgur.com/sCxoIbM.png)
 
 ## Project Hurdles
 * text
