@@ -6,7 +6,7 @@ body {
   letter-spacing: 2px;
   background-color: #DDEAEF;
 }
-#index-body , #show-body {
+.content-body {
   margin-top: 320px;
 }
 header {
@@ -68,20 +68,27 @@ input, select {
  #add-new-dive {
   text-align: right;
 }
-#add-new-dive-button, #edit-log-dive-button {
+.style-button {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   letter-spacing: 2px;
   padding: 10px;
   border-radius: 20px;
   border: solid #97AFB9;
 }
-#add-new-dive-button:hover, #edit-log-dive-button:hover {
+.style-button:hover {
   background-color: #97AFB9;
   color: white;
 }
-
+/* new dive form */
+#notes-input{
+  height: 100px;;
+  width: 50%;
+}
+.sm {
+  width: 50px;
+}
 /* header images */
-#index-img, #show-img {
+.head-img {
   position: absolute;
   top: 80px;
   left: 0px;
@@ -95,6 +102,15 @@ input, select {
 }
 .flex-content {
   margin-right: 40px;
+}
+.bottom-space {
+  margin: 50px;
+}
+hr {
+  margin-top: 15px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  max-width: 700px;
 }
 footer {
   background-color: #344A53;

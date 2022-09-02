@@ -1,10 +1,10 @@
 <%- include('../partials/header') %>
 
-<div id = "show-body">
+<div class="content-body">
 
-    <img id="show-img"src="https://i.imgur.com/8ZYAXB6.png">
+    <img class="head-img" src="https://i.imgur.com/8ZYAXB6.png">
 
-    <h1>Dive Number <%= dive.number %></h1>
+    <h1>dive no. <%= dive.number %></h1>
 
     <h2>Details</h2>
     <br>
@@ -48,7 +48,7 @@
     <div><strong>Notes:</strong></div>
     <div><%= dive.notes%></div>
     <br>
-    <a href="/dives/<%= dive._id%>/edit"><button id="edit-log-dive-button">Edit Log</button></a>
+    <a href="/dives/<%= dive._id%>/edit"><button class="style-button">Edit Log</button></a>
 
 </div>
 
