@@ -54,6 +54,8 @@ Add Certifications page
 
 * A hurdle I faced during my flash-cards edition of this project was understanding data flow. I am a visual learner so, predictably, the thing that helped me the most was drawing it out. With the help of a whiteboard and a rainbow of markers, I broke down the components of a URL and mapped out every pathway. Finally, I could see how the server, routes, views, models, and controllers all fit together. Once I figured out where the pieces interacted, I was able to create pathways quickly and the process actually became quite fun. 
 
+* Dates. I found it incredibly frustrating to work with the data type: Date. It caused problems in almost every CRUD operation. In the end, I changed the date input to a string type and left it at that. When I have a bit more time, I would like to revisit how Date-type data works within Express, MongoDB and Mongoose. 
+
 ## Planning Charts
 
 CRUD Flow Chart

@@ -2,7 +2,7 @@ const Dive = require('../models/dive');
 
 //called from login, or from header link "my dives"
 function index(req, res) {
-    Dive.find({'user': req.user}, function (err, dives) {
+    Dive.find({'user': req.user}, function (err, dives) { //find dives with user id equal to current user
         res.render('dives/index', {title: 'My Dives', dives})
     }); 
 };
@@ -25,14 +25,14 @@ function create (req, res) {
 
 //called from the my dives page, the "details"links
 function show (req, res) {
-    Dive.findById(req.params.id, function (err, dive) {
+    Dive.findById(req.params.id, function (err, dive) { 
         res.render('dives/show', {title: `dive no ${dive.number}`, dive }) //render the show view
     });
 };
 
 //called from the show view, link to edit dive
 function edit (req, res) {
-    Dive.findById(req.params.id, function (error, dive) {
+    Dive.findById(req.params.id, function (error, dive) { 
         res.render('dives/edit', {title: "Edit Dive", dive}) //renders edit dive page
     });
 }

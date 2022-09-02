@@ -5,7 +5,7 @@
 <h1>Add Certifications</h1>
 
 <div class="content-body">
-
+<!-- add a new certification -->
     <form id="new-cert-form" action="/profile/add-cert" method="POST">
         <label>Certification
             <input type="String" name="cert">
@@ -17,7 +17,7 @@
     </form>
     <hr>
     <br>
-       
+<!-- list of saved certifications        -->
         <% profile.certs.forEach(function(c) { %>
             <div class = "flex-container">
                 <div class = "flex-content">
@@ -33,6 +33,7 @@
     <br>
     <hr>
     <br>
+<!-- return to profile page     -->
     <a href="/profile"><button class="style-button">Done</button></a>
 
 </div>

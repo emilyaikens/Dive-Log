@@ -5,7 +5,8 @@
 <h1>edit profile</h1>
 
 <div class="content-body">
-
+    
+<!-- add profile info form -->
 <form id="edit-profile-form" action="/profile/<%= profile._id%>/update?_method=PUT" method="POST">
     <label>Username
         <input type="String" name="nickname" value="<%= profile.nickname%>">

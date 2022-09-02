@@ -6,14 +6,16 @@
 
 <div class="content-body">
 
-    <% if (dives.length) { %>
+<!-- add dive button -->
+<% if (dives.length) { %>
     <form id="add-new-dive"action="/dives/new">
         <input class="style-button" type="submit" value="add dive">
     </form>
-    <% }; %>
+<% }; %>
     <h2>my dives</h2>
     <br>
 
+<!-- show dives     -->
 <% if (dives.length) {%>
     <% dives.forEach(function(d) { %>
             <div class = "flex-container">
@@ -26,6 +28,8 @@
             <br>
         <% 
         }); %>
+        
+<!-- if user has no dive logged yet -->
 <% } else { %>
     <div>You have not logged any dives yet</div>
     <br>
