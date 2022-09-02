@@ -41,6 +41,10 @@ Login page
 
 ![Login Page](https://i.imgur.com/ucRq5lI.png)
 
+My Dives page
+
+![My Dives Page](https://i.imgur.com/OYXl7DE.png)
+
 New Dive page
 
 ![New Dive](https://i.imgur.com/IESpgxl.png)
