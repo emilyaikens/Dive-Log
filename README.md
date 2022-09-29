@@ -40,17 +40,17 @@ Login page
 <summary> My Dive Log Screenshot</summary>
 <img src="public/images/log.png">
 </details>
-<br/>
+
 <details>
 <summary> My Dives Screenshot</summary>
 <img src="public/images/diveno.png">
 </details>
-<br/>
+
 <details>
 <summary> New Dive Screenshot</summary>
 <img src="public/images/newdive.png">
 </details>
-<br/>
+
 <details>
 <summary> Profile Screenshot</summary>
 <img src="public/images/profile.png">
@@ -69,17 +69,16 @@ Login page
 <summary> CRUD Flow Chart</summary>
 <img src="https://i.imgur.com/ZHvfQMd.png">
 </details>
-<br/>
+
 <details>
 <summary> ERD </summary>
 <img src="https://i.imgur.com/T7kCMwF.png">
 </details>
-<br/>
+
 <details>
 <summary> Page Layout </summary>
 <img src="https://i.imgur.com/KQktnwj.png">
 </details>
-<br/>
 
 ## Planning Links
 
