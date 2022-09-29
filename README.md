@@ -34,24 +34,27 @@ A full-stack app designed for divers to log, save, and access their dives online
 
 Login page
 
-![Login Page](public/images/login.png)
+![Login](public/images/login.png)
 
-My Dive Log page
-
-![New Dive](public/images/log.png)
-
-My Dive page
-
-![My Dive](public/images/diveno.png)
-
-New Dive page
-
-![New Dive](public/images/newdive.png)
-
-Profile page
-
-![Profile Page](public/images/profile.png)
-
+<details>
+<summary> My Dive Log </summary>
+<img src="public/images/log.png">
+</details>
+<br/>
+<details>
+<summary> My Dives </summary>
+<img src="public/images/diveno.png">
+</details>
+<br/>
+<details>
+<summary> New Dive </summary>
+<img src="public/images/newdive.png">
+</details>
+<br/>
+<details>
+<summary> Profile </summary>
+<img src="public/images/profile.png">
+</details>
 
 ## Project Hurdles
 * The largest hurdle I had, by far, was having to start my project over two days before it was due. My first plan was to create a flashcard app, but after creating all of the CRUD functionality I was left with the question of how to implement the "previous card", "next card", and "flip card" functions. While it was possible to create routes for this functionality to work, I quickly realized that the combination of technologies required for this project were not the most efficient tools for a flash-card app. This project was designed to give us a thorough understanding of the required technologies - not just _how_ to use them, but also _when_ to use them. I chose to honor the purpose of the project by starting a new app that would be better suited to the technology - thus, the dive log app was born. Despite doubling my work load, I am glad of my choice because I now feel extremeley confident in my ability to work with the involved technologies. 
