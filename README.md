@@ -75,9 +75,11 @@ Login page
 <img src="https://i.imgur.com/T7kCMwF.png">
 </details>
 <br/>
-Page Layout
-
-![Page Layout](https://i.imgur.com/KQktnwj.png)
+<details>
+<summary> Page Layout </summary>
+<img src="https://i.imgur.com/KQktnwj.png">
+</details>
+<br/>
 
 ## Planning Links
 
