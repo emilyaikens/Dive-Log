@@ -37,22 +37,22 @@ Login page
 ![Login](public/images/login.png)
 
 <details>
-<summary> My Dive Log </summary>
+<summary> My Dive Log Screenshot</summary>
 <img src="public/images/log.png">
 </details>
 <br/>
 <details>
-<summary> My Dives </summary>
+<summary> My Dives Screenshot</summary>
 <img src="public/images/diveno.png">
 </details>
 <br/>
 <details>
-<summary> New Dive </summary>
+<summary> New Dive Screenshot</summary>
 <img src="public/images/newdive.png">
 </details>
 <br/>
 <details>
-<summary> Profile </summary>
+<summary> Profile Screenshot</summary>
 <img src="public/images/profile.png">
 </details>
 
