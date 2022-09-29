@@ -65,14 +65,16 @@ Login page
 
 ## Planning Charts
 
-CRUD Flow Chart
-
-![CRUD Flow Chart](https://i.imgur.com/ZHvfQMd.png)
-
-ERD
-
-![ERD](https://i.imgur.com/T7kCMwF.png)
-
+<details>
+<summary> CRUD Flow Chart</summary>
+<img src="https://i.imgur.com/ZHvfQMd.png">
+</details>
+<br/>
+<details>
+<summary> ERD </summary>
+<img src="https://i.imgur.com/T7kCMwF.png">
+</details>
+<br/>
 Page Layout
 
 ![Page Layout](https://i.imgur.com/KQktnwj.png)
